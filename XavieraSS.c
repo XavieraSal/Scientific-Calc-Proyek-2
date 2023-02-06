@@ -1,9 +1,9 @@
 #include "XavieraSS.h"
 
-
-int main(void){
-	InversSin ();
-}
+//
+//int main(void){
+//	InversSin ();
+//}
 
 void InversSin ()
 {

@@ -30,7 +30,7 @@ void  Tangen()
     result = tan(a*phi/180);
     printf("\ntan dari %g derajat adalah = %.2f",a, result);
 }
-void main()
+void next()
 {
 	switch(menu())
 	{

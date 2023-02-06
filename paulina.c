@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "pangkat.h"
+#include "paulina.h"
 
-int main (){
-	pangkat2();
-}
+//int main (){
+//	pangkat2();
+//}
 
 int pangkat (int x, int y){
 	int p;

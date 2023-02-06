@@ -1,4 +1,4 @@
-#ifndef pangkat_h
+#ifndef paulina_h
 #include <stdio.h>
 #include <stdlib.h>
 
