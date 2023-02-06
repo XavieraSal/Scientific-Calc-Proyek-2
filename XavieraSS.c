@@ -17,11 +17,11 @@ void InversSin ()
     else
     {
         result = InversSinRad (n);
-        printf("Inverse of sin(%.2f) = %.2lf in radians\n", n, result);
+        printf("Inverse dari sin(%.2f) = %.2lf dalam radian\n", n, result);
 
-      // converting radians to degree
+
         result = InversSinDeg (n);    
-        printf("Inverse of sin(%.2f) = %.2lf in degrees\n", n, result);
+        printf("Inverse dari sin(%.2f) = %.2lf dalam derajat\n", n, result);
     }
 }
 
