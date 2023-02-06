@@ -4,7 +4,7 @@
 #define phi 3.141592654
 
 void InversSin ();
-int InversSinRad(double n);
-int InversSinDeg (double n);
+float InversSinRad(double n);
+float InversSinDeg (double n);
 
 #endif
