@@ -1,7 +1,7 @@
 #include "XavieraSS.h"
 
 
-int main(){
+int main(void){
 	InversSin ();
 }
 
@@ -25,13 +25,13 @@ void InversSin ()
     }
 }
 
-int InversSinRad(double n)
+float InversSinRad(double n)
 {
 	return asin(n);
     
 }
 
-int InversSinDeg (double n)
+float InversSinDeg (double n)
 {
 	return asin(n)*180/phi;
 }  
