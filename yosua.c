@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <conio.h>
-#include "yosua penjumlahan.h"
+#include "yosua.h"
 
 float a,b;
 void penjumlahan ();
