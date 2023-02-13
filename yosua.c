@@ -1,5 +1,4 @@
 #include <stdio.h>
-<<<<<<< HEAD
 #include "yosua.h"
 
 int main() {	
@@ -32,7 +31,7 @@ int main() {
 		
 	return 0;
 }
-=======
+
 #include <conio.h>
 #include "yosua.h"
 
@@ -42,7 +41,6 @@ void penjumlahan ();
 //int main (){
 // penjumlahan();
 //}
->>>>>>> 434cd03f062e0d9601bc3e1dfd461558fc2446a9
 
 void penjumlahan() {
 	int a,b, hasil;
