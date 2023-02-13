@@ -1,9 +1,9 @@
 #include "XavieraSS.h"
 
-
-int main(){
-	InversSin ();
-}
+//
+//int main(void){
+//	InversSin ();
+//}
 
 void InversSin ()
 {
@@ -17,21 +17,21 @@ void InversSin ()
     else
     {
         result = InversSinRad (n);
-        printf("Inverse of sin(%.2f) = %.2lf in radians\n", n, result);
+        printf("Inverse dari sin(%.2f) = %.2lf dalam radian\n", n, result);
 
-      // converting radians to degree
+
         result = InversSinDeg (n);    
-        printf("Inverse of sin(%.2f) = %.2lf in degrees\n", n, result);
+        printf("Inverse dari sin(%.2f) = %.2lf dalam derajat\n", n, result);
     }
 }
 
-int InversSinRad(double n)
+float InversSinRad(double n)
 {
 	return asin(n);
     
 }
 
-int InversSinDeg (double n)
+float InversSinDeg (double n)
 {
 	return asin(n)*180/phi;
 }  
