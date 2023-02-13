@@ -2,10 +2,10 @@
 #include<stdlib.h>
 #include "AuliaAziizah.h"
  
-int main(void)
-{
-	hasilKonversiCelcius();
-}
+//int main(void)
+//{
+//	hasilKonversiCelcius();
+//}
 
 float konversiCelciusFahrenheit (float celcius){
 	float fahrenheit;
