@@ -5,6 +5,7 @@ void penjumlahan();
 void pengurangan();
 void perkalian();
 void pembagian();
+void modulus();
 int main();
 
 

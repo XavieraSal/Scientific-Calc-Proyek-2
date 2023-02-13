@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "yosua.h"
 
+//* Yosua Balingga_221511033_ Suentific Calculator_Projek2 */
+//*Saya buat operator penjumlahan, pengurangan, perkalian, pembagian dan modulus sisa, sebagai berikut ini:*/
+
 int main() {	
 	int menu;
 	
@@ -9,6 +12,7 @@ int main() {
 		printf("2. Pengurangan\n");
 		printf("3. Perkalian\n");
 		printf("4. Pembagian\n");
+		printf("5. Modulus\n");
 		printf("Pilih Menu Diatas: \n"); scanf("%d", &menu);
 		printf("\n");
 		
@@ -25,25 +29,15 @@ int main() {
 			case 4:
 				pembagian();
 				break;
+				case 5:
+					modulus();
+					break;
 				
 		}
 	} while (menu);
 		
 	return 0;
 }
-<<<<<<< HEAD
-
-#include <conio.h>
-#include "yosua.h"
-
-float a,b;
-void penjumlahan ();
-
-//int main (){
-// penjumlahan();
-//}
-=======
->>>>>>> dedb82980a5432438462172a0f1fce0fdfe134db
 
 void penjumlahan() {
 	int a,b, hasil;
@@ -93,30 +87,17 @@ void pembagian() {
 	getch();	
 }
 
+void modulus(){
+	int a,b, hasil;
+	printf("Masukan nilai pertama dari modulus=");
+	scanf("%d",&a);
+	printf("Masukan nilai kedua dari modulus=");
+	scanf("%d",&b);
+	hasil= a%b;
+	printf("-----------\n");
+	printf("Hasil modulus =%d\n", hasil);
+	getch();
+}
 
-//#include <stdio.h>
-//#include <conio.h>
-//#include "yosua.h"
-///* Yosua Balingga_221511033_ Suentific Calculator_Projek2 */
-///*Saya buat operator penjumlahan, pengurangan, perkalian, pembagian dan modulus sisa, sebagai berikut ini:*/
-//
-//float a,b;
-//void penjumlahan ();
-//
-//int main (){
-// penjumlahan();
-//}
-//
-//void penjumlahan(){
-//
-//	int a,b, hasil;
-//	printf("Masukan nilai A =");
-//	scanf("%d",&a);
-//	printf("Masukan nilai B =");
-//	scanf("%d",&b);
-//	hasil= a+b;
-//	printf("Hasil penjumlahan = %d", hasil);
-//	getch();
-//}
-//
+
 
