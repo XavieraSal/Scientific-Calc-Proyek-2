@@ -57,7 +57,7 @@ void cosec()
 	result = 1/sin(a*phi/180);
 	printf("\ncosec dari %d derajat adalah = %.2f", a, result);
 }
-void main()
+void pilih()
 {
 	switch(menu())
 	{

@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "AuliaAziizah.h"
-
-int main(){
-	menuKonversiSuhu();
-	return 0;
-}
+//
+//int main(){
+//	menuKonversiSuhu();
+//	return 0;
+//}
 
 void menuKonversiSuhu(){
 	int pilih;

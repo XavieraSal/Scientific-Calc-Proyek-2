@@ -23,4 +23,4 @@ float konversiReamurFahrenheit(float reamur);
 float konversiReamurKelvin(float reamur);
 void hasilKonversiFahrenheit();
 
-#endiff
+#endif

@@ -1,10 +1,10 @@
 #include "XavieraSS.h"
 
 
-int main(void){
-InversSin ();
-InversCos ();
-}
+//int main(void){
+//InversSin ();
+//InversCos ();
+//}
 
 void InversSin ()
 {
