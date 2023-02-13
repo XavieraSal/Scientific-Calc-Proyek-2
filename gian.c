@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define phi 3.141592654
+#define PI 3.141592654
 #include <math.h>
 #include "gian.h"
 
@@ -11,7 +11,7 @@ void sinus()
 	double a;
     printf("SIN : \nEnter angle in radians: ");
     scanf("%lf", &a);
-    result = sin(a*phi/180);
+    result = sin(a*PI/180);
     printf("\nsin dari %g derajat adalah = %.2f",a, result);
 }
 void cosinus()
@@ -19,7 +19,7 @@ void cosinus()
     double a;
     printf("Enter angle in radians: ");
     scanf("%lf", &a);
-    result = cos(a*phi/180);
+    result = cos(a*PI/180);
     printf("\ncos dari %g derajat adalah = %.2f",a , result);
 }
 void  Tangen()
@@ -27,7 +27,7 @@ void  Tangen()
 	double a;
     printf("Enter angle in radians: ");
     scanf("%lf", &a);
-    result = tan(a*phi/180);
+    result = tan(a*PI/180);
     printf("\ntan dari %g derajat adalah = %.2f",a, result);
 }
 void main()
