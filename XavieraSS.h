@@ -6,5 +6,8 @@
 void InversSin ();
 float InversSinRad(double n);
 float InversSinDeg (double n);
+void InversCos();
+float InversCosRad(double n);
+float InversCosDrjt (double n);
 
 #endif
