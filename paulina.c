@@ -2,10 +2,16 @@
 #include <stdlib.h>
 #include "paulina.h"
 
+<<<<<<< HEAD
 int main (){
 	pangkat2();
 	akar();
 }
+=======
+//int main (){
+//	pangkat2();
+//}
+>>>>>>> dedb82980a5432438462172a0f1fce0fdfe134db
 
 int pangkat (int x, int y){
 	int p;
