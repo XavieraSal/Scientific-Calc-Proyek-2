@@ -1,13 +1,9 @@
 /*header */
-#ifndef yosua_h
 #include <stdio.h>
 #include <conio.h>
-void penjumlahan();
-void pengurangan();
-void perkalian();
-void pembagian();
-void modulus();
+int penjumlahan(int x, int y);
+int pengurangan(int x, int y);
+int perkalian(int x, int y);
+int pembagian(int x, int y);
+int modulus(int x, int y);
 
-
-
-#endif
