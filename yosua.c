@@ -31,6 +31,19 @@ int main() {
 		
 	return 0;
 }
+<<<<<<< HEAD
+
+#include <conio.h>
+#include "yosua.h"
+
+float a,b;
+void penjumlahan ();
+
+//int main (){
+// penjumlahan();
+//}
+=======
+>>>>>>> dedb82980a5432438462172a0f1fce0fdfe134db
 
 void penjumlahan() {
 	int a,b, hasil;
