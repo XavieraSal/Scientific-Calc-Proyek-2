@@ -1,5 +1,4 @@
 #include <stdio.h>
-<<<<<<< HEAD
 #include "yosua.h"
 
 int main() {	
@@ -32,17 +31,6 @@ int main() {
 		
 	return 0;
 }
-=======
-#include <conio.h>
-#include "yosua.h"
-
-float a,b;
-void penjumlahan ();
-
-//int main (){
-// penjumlahan();
-//}
->>>>>>> 434cd03f062e0d9601bc3e1dfd461558fc2446a9
 
 void penjumlahan() {
 	int a,b, hasil;
@@ -91,4 +79,31 @@ void pembagian() {
 	printf("Hasil Pembagian = %d\n", hasil);
 	getch();	
 }
+
+
+//#include <stdio.h>
+//#include <conio.h>
+//#include "yosua.h"
+///* Yosua Balingga_221511033_ Suentific Calculator_Projek2 */
+///*Saya buat operator penjumlahan, pengurangan, perkalian, pembagian dan modulus sisa, sebagai berikut ini:*/
+//
+//float a,b;
+//void penjumlahan ();
+//
+//int main (){
+// penjumlahan();
+//}
+//
+//void penjumlahan(){
+//
+//	int a,b, hasil;
+//	printf("Masukan nilai A =");
+//	scanf("%d",&a);
+//	printf("Masukan nilai B =");
+//	scanf("%d",&b);
+//	hasil= a+b;
+//	printf("Hasil penjumlahan = %d", hasil);
+//	getch();
+//}
+//
 
