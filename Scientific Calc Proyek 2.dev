@@ -1,6 +1,6 @@
 [Project]
-filename=Scientific Calc Proyek 2.dev
-name=Scientific Calc Proyek 2
+FileName=Scientific Calc Proyek 2.dev
+Name=Scientific Calc Proyek 2
 Type=1
 Ver=2
 ObjFiles=
@@ -29,7 +29,7 @@ IncludeVersionInfo=0
 SupportXPThemes=0
 CompilerSet=0
 CompilerSettings=0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;0;0;0;4;0;0;0
-UnitCount=11
+UnitCount=13
 
 [VersionInfo]
 Major=1
@@ -152,6 +152,26 @@ BuildCmd=
 
 [Unit11]
 FileName=yosua.h
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit12]
+FileName=..\Scientific Calculator\brahmantya.c
+CompileCpp=0
+Folder=
+Compile=1
+Link=1
+Priority=1000
+OverrideBuildCmd=0
+BuildCmd=
+
+[Unit13]
+FileName=..\Scientific Calculator\brahmantya.h
 CompileCpp=0
 Folder=
 Compile=1

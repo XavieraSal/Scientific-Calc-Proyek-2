@@ -1,122 +1,87 @@
 #include <stdio.h>
 #include "yosua.h"
+void tambah_bagi(float * x,float * y ){
+	printf("Masukan nilai Pertama  =");
+	
+	scanf("%f",&(*x));
+	printf("Masukan nilai Kedua =");
+	scanf("%f",&(*y));
+}
+
+void modul (int * x,int * y ){
+	printf("Masukan nilai Pertama  =");
+	scanf("%d",&*x);
+	printf("Masukan nilai Kedua =");
+	scanf("%d",&*y);
+}
+
+
 
 int main() {	
-	int menu;
+	int menu, a, b, result;
+	float c,d,hasil;
 	
-	do {
-		printf("1. Penjumlahan\n");
-		printf("2. Pengurangan\n");
-		printf("3. Perkalian\n");
-		printf("4. Pembagian\n");
-		printf("Pilih Menu Diatas: \n"); scanf("%d", &menu);
-		printf("\n");
-		
-		switch(menu) {
-			case 1:
-				penjumlahan();
-				break;
-			case 2:
-				pengurangan();
-				break;
-			case 3:
-				perkalian();
-				break;
-			case 4:
-				pembagian();
-				break;
-				
-		}
-	} while (menu);
-		
+	
+	printf("1. Penjumlahan\n");
+	printf("2. Pengurangan\n");
+	printf("3. Perkalian\n");
+	printf("4. Pembagian\n");
+	printf("5. Modulus\n");
+	printf("Pilih Menu Diatas: \n"); scanf("%d", &menu);
+	printf("\n");
+	
+
+
+	switch(menu) {
+		case 1:
+			tambah_bagi(&c,&d);
+			hasil = penjumlahan(c, d);
+			printf("Hasil Penjumlahan : %f", hasil);
+			break;
+		case 2:
+			tambah_bagi(&c,&d);
+			hasil = pengurangan(c, d);
+			printf("Hasil Pengurangan : %f", hasil);
+			break;
+		case 3:
+			tambah_bagi(&c,&d);
+			hasil = perkalian(c, d);
+			printf("Hasil Perkalian : %f", hasil);
+			break;
+		case 4:
+			tambah_bagi(&c,&d);
+			hasil = pembagian(c, d);
+			printf("Hasil Pembagian : %f", hasil);
+			break;
+		case 5:
+			modul(&a,&b);
+			result = modulus(a,b);
+			printf("Hasil Modulus :%d", result);
+			break;
+			
+	}
+	
+	
 	return 0;
 }
-<<<<<<< HEAD
 
-#include <conio.h>
-#include "yosua.h"
-
-float a,b;
-void penjumlahan ();
-
-//int main (){
-// penjumlahan();
-//}
-=======
->>>>>>> dedb82980a5432438462172a0f1fce0fdfe134db
-
-void penjumlahan() {
-	int a,b, hasil;
-	printf("Masukan nilai Pertama dari penjumlahan =");
-	scanf("%d",&a);
-	printf("Masukan nilai Kedua dari penjumlahan=");
-	scanf("%d",&b);
-	hasil= a+b;
-	printf("-----------\n");
-	printf("Hasil penjumlahan = %d", hasil);
-	getch();
+float penjumlahan(float x, float y){
+	return x+y;
 }
 
-void pengurangan() {
-	int a,b, hasil;
-	printf("Masukan nilai Pertama dari pengurangan=");
-	scanf("%d",&a);
-	printf("Masukan nilai Kedua dari pengurangan=");
-	scanf("%d",&b);
-	hasil= a-b;
-	printf("-----------\n");
-	printf("Hasil Pengurangan = %d", hasil);
-	getch();
+float pengurangan(float x, float y){
+	return x-y;
 }
 
-void perkalian() {
-	int a,b, hasil;
-	printf("Masukan nilai Pertama dari perkalian=");
-	scanf("%d",&a);
-	printf("Masukan nilai Kedua dari perkalian=");
-	scanf("%d",&b);
-	hasil= a*b;
-	printf("-----------\n");
-	printf("Hasil Perkalian = %d", hasil);
-	getch();	
+float perkalian(float x, float y){
+	return x*y;
 }
 
-void pembagian() {
-	int a,b, hasil;
-	printf("Masukan nilai Pertama dari pembagian =");
-	scanf("%d",&a);
-	printf("Masukan nilai Kedua dari pembagian=");
-	scanf("%d",&b);
-	hasil= a/b;
-	printf("-----------\n");
-	printf("Hasil Pembagian = %d\n", hasil);
-	getch();	
+float pembagian(float x, float y){
+	return x/y;
 }
 
-
-//#include <stdio.h>
-//#include <conio.h>
-//#include "yosua.h"
-///* Yosua Balingga_221511033_ Suentific Calculator_Projek2 */
-///*Saya buat operator penjumlahan, pengurangan, perkalian, pembagian dan modulus sisa, sebagai berikut ini:*/
-//
-//float a,b;
-//void penjumlahan ();
-//
-//int main (){
-// penjumlahan();
-//}
-//
-//void penjumlahan(){
-//
-//	int a,b, hasil;
-//	printf("Masukan nilai A =");
-//	scanf("%d",&a);
-//	printf("Masukan nilai B =");
-//	scanf("%d",&b);
-//	hasil= a+b;
-//	printf("Hasil penjumlahan = %d", hasil);
-//	getch();
-//}
-//
+int modulus(int x, int y){
+	return x%y;
+}
 
