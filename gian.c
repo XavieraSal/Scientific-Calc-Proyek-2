@@ -1,17 +1,27 @@
 #include <stdio.h>
-#define phi 3.141592654
+#define phi 3.14159265
+#include <math.h>
 #include "gian.h"
 int k = 0, a;
 float result = 0;	
-
 
 void sinus()
 {
 	float a;
     printf("SIN : \nEnter angle in radians: ");
     scanf("%f", &a);
-    result = sin(a*phi/180);
+<<<<<<< HEAD
+//    result = sin(a*phi/180);
     printf("\nsin dari derajat adalah = %g", result);
+=======
+    result = sin(a*phi/180);
+    printf("\nsin dari %d derajat adalah = %g",a , result);
+>>>>>>> 5ff53f59353d898c4ff505302887c9b7afb4b8a2
+}
+
+int hitung_sin(){
+	result = sin(a*phi/180);
+	return result;
 }
 void cosinus()
 {
@@ -27,19 +37,56 @@ void tangent()
     printf("Enter angle in radians: ");
     scanf("%lf", &a);
     result = tan(a*phi/180);
-    printf("\nResult = %.2f", result);
+    printf("\ntan dari %d derajat adalah = %.2f",a , result);
 }
-void main()
+
+void Cotan()
+{
+	double a;
+	printf("Enter angle in radians: " );
+	scanf("%lf", &a);
+	result = 1/tan(a*phi/180);
+	printf("\Cot dari %d derajat adalah = %.2f",a , result);
+}
+
+void Secan()
+{
+	double a;
+	printf("Enter angle in radians: ");
+	scanf("%lf", &a);
+	result  = 1/cos(a*phi/180);
+	printf("\nsec dari %d derajat adalah = %.2f",a , result );
+}
+
+void cosec()
+{
+	double a;
+	printf("Enter angele in radians: ");
+	scanf("%lf", &a);
+	result = 1/sin(a*phi/180);
+	printf("\ncosec dari %d derajat adalah = %.2f", a, result);
+}
+void pilih()
 {
 	switch(menu())
 	{
 		case 1: sinus();
+				hitung_sin();
 		break;
 		
 		case 2: cosinus();
 		break;
 		
 		case 3: tangent();
+		break;
+		
+		case 4: Cotan();
+		break;
+		
+		case 5: Secan();
+		break;
+		
+		case 6: cosec();
 		break;
 	 } 
 }
@@ -50,7 +97,10 @@ int menu()
     printf("\n1. Sinus");
     printf("\n2. Cosin");
     printf("\n3. Tangen");
-    printf("\n\nmenu : ");
+    printf("\n4. Cotan");
+	printf("\n5. Secan");
+	printf("\n6. Cosec");
+	printf("\n\nmenu : ");
     scanf("%d", &list);
     return list;
 }
