@@ -4,14 +4,18 @@
 int k = 0, a;
 float result = 0;	
 
-
 void sinus()
 {
 	float a;
     printf("SIN : \nEnter angle in radians: ");
     scanf("%f", &a);
-    result = sin(a*phi/180);
+//    result = sin(a*phi/180);
     printf("\nsin dari derajat adalah = %g", result);
+}
+
+int hitung_sin(){
+	result = sin(a*phi/180);
+	return result;
 }
 void cosinus()
 {
@@ -34,6 +38,7 @@ void main()
 	switch(menu())
 	{
 		case 1: sinus();
+				hitung_sin();
 		break;
 		
 		case 2: cosinus();
