@@ -5,9 +5,16 @@
 
 void InversSin ();
 float InversSinRad(double n);
-float InversSinDeg (double n);
+float InversSinDrjt (double n);
+
 void InversCos();
 float InversCosRad(double n);
 float InversCosDrjt (double n);
 
+void InversTan();
+float InversTanRad(double n);
+float InversTanDrjt (double n);
+
+void logNatural ();
+float logaritmaNatural (double n);
 #endif

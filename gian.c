@@ -7,6 +7,7 @@ int k = 0, a, b;
 char list;
 float result = 0;	
 
+<<<<<<< HEAD
 //float tampil_result()
 //{
 //	printf("\nsin dari %.0f adalah = %g" ,a , result);
@@ -61,6 +62,25 @@ void sinus()
     scanf("%lf", &a);
 	result = hitung_sin(a);
     printf("\n sin dari %g derajat adalah = %.2f",a , result);
+=======
+void sinus()
+{
+	float a;
+    printf("SIN : \nEnter angle in radians: ");
+    scanf("%f", &a);
+<<<<<<< HEAD
+//    result = sin(a*phi/180);
+    printf("\nsin dari derajat adalah = %g", result);
+=======
+    result = sin(a*phi/180);
+    printf("\nsin dari %d derajat adalah = %g",a , result);
+>>>>>>> 5ff53f59353d898c4ff505302887c9b7afb4b8a2
+}
+
+int hitung_sin(){
+	result = sin(a*phi/180);
+	return result;
+>>>>>>> 915978c4568a4778c198143c1fd24064b0a2468e
 }
 void cosinus()
 {
@@ -146,6 +166,7 @@ void main()
 	switch(menu())
 	{
 		case 1: sinus();
+				hitung_sin();
 		break;
 		
 		case 2: cosinus();

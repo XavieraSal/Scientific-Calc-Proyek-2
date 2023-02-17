@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "paulina.h"
+#include <math.h>
 
-//<<<<<<< HEAD
-//int main (){
-//	pangkat2();
-//	akar();
-//}
-//int main (){
-//	pangkat2();
-//}
-//>>>>>>> dedb82980a5432438462172a0f1fce0fdfe134db
+int main (void){
+	pangkat2();
+	akardua();
+	akartiga();
+	logBiasa();
+	mutlak();
+}
 
-int pangkat (int x, int y){
+int pangkat (int x, int y)
+{
 	int p;
 	int hasil=1;
 	
@@ -22,7 +22,8 @@ int pangkat (int x, int y){
     return hasil;
 }
 
-void pangkat2(){
+void pangkat2()
+{
 	int x,y;
 	int hasil;
 	printf("   Perhitungan Pangkat \n");
@@ -35,16 +36,77 @@ void pangkat2(){
     printf("Hasilnya adalah  : %d", hasil);
 }
 
-float akarkuadrad(float a){
-	float hasil;
-	printf("Hasilnya adalah  : %.0f\n\n", hasil=sqrt(a));
-	return hasil;
+int akarkuadrad(int a)
+{
+	float x;
+	x=sqrt(a); //akar pangkat 2 dari x
+	printf("Akar kuadrat dari %d : %4.2f",a,x);
 }
 
-void akar(){
-	float input;
+void akardua()
+{
+	float a;
 	printf("\n\n\n   Perhitungan Akar Kuadrad \n");
-	printf("Masukkan angka   : ");
-	scanf("%f", &input);
-	akarkuadrad (input);
+	printf("Masukan angka    : ");
+	scanf("%f",&a);
+	akarkuadrad(a);
 }
+
+int akarkubik(int angka)
+{
+	double hasil;
+    hasil = pow(angka, 1.0/3.0);
+	printf("Akar tiga dari %d : %4.2f", angka, hasil);
+}
+
+void akartiga() 
+{
+	double angka;
+	printf("\n\n\n   Perhitungan Akar Kubik \n");
+	printf("Masukkan angka   : ");
+   	scanf("%lf", &angka);
+   	akarkubik(angka);
+}
+
+float logBasis10(double n)
+{
+	return log10(n);
+}
+
+void logBiasa()
+{
+	double n, result;
+	printf("\n\n\n   Logaritma Basis 10 \n");
+    printf("Masukkan angka   : ");
+    scanf("%lf", &n);
+    if(n<=0.0)
+    {
+    printf("angka yang dimasukkan harus lebih besar sama dengan dari 0.0\n");
+    }
+    else
+    {
+    result = logBasis10 (n);
+    printf("Hasilnya adalah  : %lf", result);
+	}
+}
+
+int nilaimutlak(int x)
+{
+	int y;
+	y = abs(x);    
+    printf("Nilai mutlak dari %d adalah %d\n", x, y);
+}
+    
+void mutlak()
+{
+	int x;
+	printf("\n\n\n   Perhitungan Nilai Mutlak \n");
+	printf("Masukkan angka   : ");
+	scanf("%d", &x);
+	nilaimutlak(x);
+}
+
+
+
+
+
