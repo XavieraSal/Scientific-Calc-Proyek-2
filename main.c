@@ -34,7 +34,7 @@ int main(){
 		case 4 : next();
 				 break;
 				 
-		case 5 : penjumlahan();;
+		case 5 : penjumlahan();
 				 break;
 				 
 		default:
