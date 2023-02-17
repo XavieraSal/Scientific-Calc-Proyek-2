@@ -8,6 +8,7 @@ int main (void){
 	akardua();
 	akartiga();
 	logBiasa();
+	mutlak();
 }
 
 int pangkat (int x, int y)
@@ -87,6 +88,22 @@ void logBiasa()
     result = logBasis10 (n);
     printf("Hasilnya adalah  : %lf", result);
 	}
+}
+
+int nilaimutlak(int x)
+{
+	int y;
+	y = abs(x);    
+    printf("Nilai mutlak dari %d adalah %d\n", x, y);
+}
+    
+void mutlak()
+{
+	int x;
+	printf("\n\n\n   Perhitungan Nilai Mutlak \n");
+	printf("Masukkan angka   : ");
+	scanf("%d", &x);
+	nilaimutlak(x);
 }
 
 
