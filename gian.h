@@ -3,6 +3,7 @@
 
 void sinus();
 void cosinus();
+void tangent();
 int menu();
 
 #endif
