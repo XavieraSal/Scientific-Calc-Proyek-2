@@ -1,8 +1,26 @@
 #include <stdio.h>
 #include "yosua.h"
+void tambah_bagi(float * x,float * y ){
+	printf("Masukan nilai Pertama  =");
+	
+	scanf("%f",&(*x));
+	printf("Masukan nilai Kedua =");
+	scanf("%f",&(*y));
+}
+
+void modul (int * x,int * y ){
+	printf("Masukan nilai Pertama  =");
+	scanf("%d",&*x);
+	printf("Masukan nilai Kedua =");
+	scanf("%d",&*y);
+}
+
+
 
 int main() {	
-	int menu, a, b, hasil;
+	int menu, a, b, result;
+	float c,d,hasil;
+	
 	
 	printf("1. Penjumlahan\n");
 	printf("2. Pengurangan\n");
@@ -11,31 +29,34 @@ int main() {
 	printf("5. Modulus\n");
 	printf("Pilih Menu Diatas: \n"); scanf("%d", &menu);
 	printf("\n");
-	printf("Masukan nilai Pertama  =");
-	scanf("%d",&a);
-	printf("Masukan nilai Kedua =");
-	scanf("%d",&b);
 	
+
+
 	switch(menu) {
 		case 1:
-			hasil = penjumlahan(a, b);
-			printf("Hasil Penjumlahan : %d", hasil);
+			tambah_bagi(&c,&d);
+			hasil = penjumlahan(c, d);
+			printf("Hasil Penjumlahan : %f", hasil);
 			break;
 		case 2:
-			hasil = pengurangan(a, b);
-			printf("Hasil Pengurangan : %d", hasil);
+			tambah_bagi(&c,&d);
+			hasil = pengurangan(c, d);
+			printf("Hasil Pengurangan : %f", hasil);
 			break;
 		case 3:
-			hasil = perkalian(a, b);
-			printf("Hasil Perkalian : %d", hasil);
+			tambah_bagi(&c,&d);
+			hasil = perkalian(c, d);
+			printf("Hasil Perkalian : %f", hasil);
 			break;
 		case 4:
-			hasil = pembagian(a, b);
-			printf("Hasil Pembagian : %d", hasil);
+			tambah_bagi(&c,&d);
+			hasil = pembagian(c, d);
+			printf("Hasil Pembagian : %f", hasil);
 			break;
 		case 5:
-			hasil = modulus(a,b);
-			printf("Hasil Modulus :%d", hasil);
+			modul(&a,&b);
+			result = modulus(a,b);
+			printf("Hasil Modulus :%d", result);
 			break;
 			
 	}
@@ -44,19 +65,19 @@ int main() {
 	return 0;
 }
 
-int penjumlahan(int x, int y){
+float penjumlahan(float x, float y){
 	return x+y;
 }
 
-int pengurangan(int x, int y){
+float pengurangan(float x, float y){
 	return x-y;
 }
 
-int perkalian(int x, int y){
+float perkalian(float x, float y){
 	return x*y;
 }
 
-int pembagian(int x, int y){
+float pembagian(float x, float y){
 	return x/y;
 }
 

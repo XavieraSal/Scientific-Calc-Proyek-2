@@ -1,9 +1,9 @@
 /*header */
 #include <stdio.h>
 #include <conio.h>
-int penjumlahan(int x, int y);
-int pengurangan(int x, int y);
-int perkalian(int x, int y);
-int pembagian(int x, int y);
+float penjumlahan(float x, float y);
+float pengurangan(float x, float y);
+float perkalian(float x, float y);
+float pembagian(float x, float y);
 int modulus(int x, int y);
 
