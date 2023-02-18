@@ -7,7 +7,6 @@ int k = 0, a, b;
 char list;
 float result = 0;	
 
-<<<<<<< HEAD
 //float tampil_result()
 //{
 //	printf("\nsin dari %.0f adalah = %g" ,a , result);
@@ -62,25 +61,6 @@ void sinus()
     scanf("%lf", &a);
 	result = hitung_sin(a);
     printf("\n sin dari %g derajat adalah = %.2f",a , result);
-=======
-void sinus()
-{
-	float a;
-    printf("SIN : \nEnter angle in radians: ");
-    scanf("%f", &a);
-<<<<<<< HEAD
-//    result = sin(a*phi/180);
-    printf("\nsin dari derajat adalah = %g", result);
-=======
-    result = sin(a*phi/180);
-    printf("\nsin dari %d derajat adalah = %g",a , result);
->>>>>>> 5ff53f59353d898c4ff505302887c9b7afb4b8a2
-}
-
-int hitung_sin(){
-	result = sin(a*phi/180);
-	return result;
->>>>>>> 915978c4568a4778c198143c1fd24064b0a2468e
 }
 void cosinus()
 {
@@ -125,37 +105,52 @@ void cosec()
 	result = hitung_cosec(a);
 	printf("\n cosec dari %g derajat adalah = %.2f", a, result);
 }
-void factorial() {
-    int angka, faktorial = 1, i;
-    
-    printf(" Faktorial \n Masukkan suatu bilangan bulat positif: ");
-    scanf("%d", &angka);
-//   faktorial = hitung_faktorial();
-    if (angka < 0) {
-        printf(" Maaf, faktorial hanya dapat dihitung untuk bilangan bulat positif.\n");
-    }
-    else {
-        for (i = 1; i <= angka; i++) {
-            faktorial *= i;
-        }
-        printf(" Faktorial dari %d adalah %d.\n", angka, faktorial);
-		}
-		return 0;
-}
-
-
-//int hitung_faktorial(i)
-//{
-//	int temp,faktorial = 1, angka;
-//	 if (angka < 0) {
+int factorial() {
+//    int angka, faktorial = 1, i;
+//    
+//    printf(" Faktorial \n Masukkan suatu bilangan bulat positif: ");
+//    scanf("%d", &angka);
+////    faktorial = hitung_faktorial();
+//    if (angka < 0) {
 //        printf(" Maaf, faktorial hanya dapat dihitung untuk bilangan bulat positif.\n");
 //    }
 //    else {
 //        for (i = 1; i <= angka; i++) {
 //            faktorial *= i;
-//            faktorial = temp;
 //        }
-//	return temp;
+//        printf(" Faktorial dari %d adalah %d.\n", angka, faktorial);
+//		}
+//		return 0;
+
+int angka;
+    printf(" Masukkan angka untuk dicari faktorialnya: ");
+    scanf(" %d", &angka);
+
+    printf(" Hasil dari %d! = %d", angka, faktorial(angka));
+//	printf("%d",i);
+//    if(i != angka) {
+//      printf (" * ");
+ //   }
+    return 0;
+}
+
+int faktorial(int n) {
+    if (n == 0) {
+        return 1;
+    } else {
+        return n * faktorial(n-1);    
+    }
+}
+
+//	int faktorial = 1, angka, i;
+//	if (angka < 0) {
+//        printf(" Maaf, faktorial hanya dapat dihitung untuk bilangan bulat positif.\n");
+//    }
+//    else {
+//        for (i = 1; i <= angka; i++) {
+//            faktorial *= i;
+//        }
+//	return 0;
 //}
 //}
 void main()
@@ -166,7 +161,6 @@ void main()
 	switch(menu())
 	{
 		case 1: sinus();
-				hitung_sin();
 		break;
 		
 		case 2: cosinus();
