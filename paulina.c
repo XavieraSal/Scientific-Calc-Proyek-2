@@ -4,18 +4,55 @@
 #include <math.h>
 
 int main (void){
-	pangkat2();
-	akardua();
-	akartiga();
-	logBiasa();
-	mutlak();
+	pilihan();
+}
+
+void pilihan(){
+	int menu;
+	pilihan;
+	printf("\t\t\t\t\t ==================================================================================       \n");
+	printf("\t\t\t\t\t                                    ----------------                                      \n");
+	printf("\t\t\t\t\t                                   (1) Perpangkatan                                       \n");
+	printf("\t\t\t\t\t                                    ----------------                                      \n");
+	printf("\t\t\t\t\t                                    ----------------                                      \n");
+	printf("\t\t\t\t\t                                   (2) Akar                                               \n");
+	printf("\t\t\t\t\t                                    ----------------                                      \n");
+	printf("\t\t\t\t\t                                    ----------------                                      \n");
+	printf("\t\t\t\t\t                                   (3) Mutlak                                             \n");
+	printf("\t\t\t\t\t                                    ----------------                                      \n");
+	printf("\t\t\t\t\t                                    ----------------                                      \n");
+	printf("\t\t\t\t\t                                   (4) Logaritma 10                                       \n");
+	printf("\t\t\t\t\t                                    ----------------                                      \n");
+	printf("\t\t\t\t\t ==================================================================================       \n");
+	printf("\t\t\t\t\t                                       PILIHAN : ");
+	scanf("%d", &menu);
+	printf("\t\t\t\t\t ==================================================================================       \n");
+	system("cls");
+	switch(menu)
+	{
+		case 1:
+			pangkat2();
+			break;
+		case 2:
+			akarsemua();
+			break;
+		case 3:
+			mutlak();
+			break;
+		case 4:
+			logBiasa();
+			break;
+		default:
+			printf("\t\t\t\t\t Mohon maaf pilihan anda salah! ");
+			getche();
+	}	
+
 }
 
 int pangkat (int x, int y)
 {
 	int p;
 	int hasil=1;
-	
 	 for(p=1;p<=y;p++){
         hasil=hasil*x;
     }
@@ -26,47 +63,53 @@ void pangkat2()
 {
 	int x,y;
 	int hasil;
-	printf("   Perhitungan Pangkat \n");
+	
+	printf(" Perhitungan Pangkat \n ");
 	printf("Masukkan angka   : ");
-    scanf("%i", &x);
+    scanf("%d", &x);
     printf("Pangkat          : ");
-    scanf("%i", &y);
- 
- 	hasil=pangkat ( x,  y);
-    printf("Hasilnya adalah  : %d", hasil);
+    scanf("%d", &y);
+	hasil = pangkat(x, y);
+    printf("\nHasilnya adalah  : %d", hasil);
 }
 
-int akarkuadrad(int a)
-{
-	float x;
-	x=sqrt(a); //akar pangkat 2 dari x
-	printf("Akar kuadrat dari %d : %4.2f",a,x);
+float akar(int angka, int p)
+{	
+	float hasil;
+	hasil = pow (angka, 1.0/p);
+	return hasil;
 }
 
-void akardua()
-{
-	float a;
-	printf("\n\n\n   Perhitungan Akar Kuadrad \n");
-	printf("Masukan angka    : ");
-	scanf("%f",&a);
-	akarkuadrad(a);
+void akarsemua()
+{ 
+	int p, angka;
+	float hasil;
+	printf("\n\n\n   Perhitungan Akar \n");
+	printf("Masukkan angka : ");
+    scanf("%d", &angka);
+    printf("Masukkan akar : ");
+    scanf("%d", &p);
+    hasil = akar(angka, p);
+    printf("Akar %d dari %d adalah %.3f \n ", p, angka, hasil);
 }
 
-int akarkubik(int angka)
+int nilaimutlak(int x)
 {
-	double hasil;
-    hasil = pow(angka, 1.0/3.0);
-	printf("Akar tiga dari %d : %4.2f", angka, hasil);
+	int y;
+	y = abs(x);
+	return y;    
 }
-
-void akartiga() 
+    
+void mutlak()
 {
-	double angka;
-	printf("\n\n\n   Perhitungan Akar Kubik \n");
+	int x, mutlak;
+	printf("\n\n\n   Perhitungan Nilai Mutlak \n");
 	printf("Masukkan angka   : ");
-   	scanf("%lf", &angka);
-   	akarkubik(angka);
+	scanf("%d", &x);
+	mutlak = nilaimutlak(x);
+	printf("Nilai mutlak dari %d : %d\n", x, mutlak);
 }
+
 
 float logBasis10(double n)
 {
@@ -86,25 +129,12 @@ void logBiasa()
     else
     {
     result = logBasis10 (n);
-    printf("Hasilnya adalah  : %lf", result);
+    printf("Hasilnya adalah  : %.3f", result);
 	}
 }
 
-int nilaimutlak(int x)
-{
-	int y;
-	y = abs(x);    
-    printf("Nilai mutlak dari %d adalah %d\n", x, y);
-}
-    
-void mutlak()
-{
-	int x;
-	printf("\n\n\n   Perhitungan Nilai Mutlak \n");
-	printf("Masukkan angka   : ");
-	scanf("%d", &x);
-	nilaimutlak(x);
-}
+
+
 
 
 

@@ -4,15 +4,14 @@
 #include <math.h>
 
 int pangkat (int x, int y);
-int akarkuadrad(int a);
+float akar(int angka, int p);
 float logBasis10(double n);
-int akarkubik();
 int nilaimutlak(int x);
 
+void pilihan();
 void pangkat2();
-void akardua();
+void akarsemua();
 void logBiasa();
-void akartiga();
 void mutlak();
 
 #endif
