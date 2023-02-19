@@ -1,11 +1,17 @@
 #ifndef paulina_h
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
 int pangkat (int x, int y);
-float akarkuadrad(float a);
+float akar(int angka, int p);
+float logBasis10(double n);
+int nilaimutlak(int x);
 
+void pilihan();
 void pangkat2();
-void akar();
+void akarsemua();
+void logBiasa();
+void mutlak();
 
 #endif
