@@ -17,4 +17,9 @@ float InversTanDrjt (double n);
 
 void logNatural ();
 float logaritmaNatural (double n);
+
+void Turunan ();
+double koefTurunan (double ekspo, double koef);
+double ekspoTurunan (double ekspo);
+
 #endif

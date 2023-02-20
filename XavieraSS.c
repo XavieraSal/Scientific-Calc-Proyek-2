@@ -6,6 +6,7 @@ InversSin ();
 InversCos ();
 InversTan ();
 logNatural ();
+Turunan ();
 }
 
 
@@ -88,10 +89,10 @@ void InversTan()
     scanf("%lf",&n);
     
     result = InversTanRad(n);
-    printf("\nInverse of tan(%.2f) = %.2f in radians", n, result);
+    printf("Invers dari tan(%.2f) = %.2f dalam radian", n, result);
 
     result = InversTanDrjt (n);
-    printf("\nInverse of tan(%.2f) = %.2f in degrees", n, result);
+    printf("\nInvers dari tan(%.2f) = %.2f in derajat", n, result);
 }
 
 float InversTanRad(double n)
@@ -109,8 +110,8 @@ float InversTanDrjt (double n)
 void logNatural ()
 {
 	double n, result;
-	printf("\nLogaritma Natural: ");
-    printf("masukkan angka: ");
+	printf("\n\nLogaritma Natural: ");
+    printf("\nmasukkan angka: ");
     scanf("%lf", &n);
     if(n<=0.0)
     {
@@ -118,8 +119,8 @@ void logNatural ()
     }
     else
     {
-    result = logaritmaNatural (n);
-    printf("\nResult = %lf", result);
+    result = logaritmaNatural(n);
+    printf("Hasil = %lf", result);
 	}
 }
 
@@ -128,3 +129,39 @@ float logaritmaNatural (double n)
 	return log(n);
 }
 
+/* Mencari Turunan */
+
+void Turunan()
+{
+	double koef, ekspo, result1, result2;
+	char var = 't';
+	printf("\n\nTurunan");
+	printf("\nMasukkan koefisien atau konstanta: ");
+    scanf("%lf", &koef);
+    fflush(stdin);
+    printf("\nMasukkan variabel (jika tidak ada, input 't'): ");
+    scanf("%s", &var);
+    if (var=='t' || koef==0){
+    	printf("\nturunan dari %.1lf adalah 0", koef);
+	}
+	else{
+	    printf("\nMasukkan pangkat dari variabel: ");
+	    scanf(" %lf", &ekspo);
+		result1 = koefTurunan (ekspo, koef);
+	    result2 = ekspoTurunan(ekspo);
+	    printf("\nturunan dari %.1lf%c^%.1lf adalah %.1lf%c^%.1lf", koef, var, ekspo, result1, var, result2);
+	}
+}
+
+double koefTurunan (double ekspo, double koef)
+{
+	if (koef==0){
+		koef+=1;
+	}
+	return ekspo*koef;
+}
+
+double ekspoTurunan (double ekspo)
+{
+	return ekspo-=1;
+}
