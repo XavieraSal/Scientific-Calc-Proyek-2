@@ -53,7 +53,7 @@ int pangkat (int x, int y)
 {
 	int p;
 	int hasil=1;
-	 for(p=1;p<=y;p++){
+	for(p=1;p<=y;p++){
         hasil=hasil*x;
     }
     return hasil;
@@ -84,13 +84,13 @@ void akarsemua()
 { 
 	int p, angka;
 	float hasil;
-	printf("\n\n\n   Perhitungan Akar \n");
+	printf("  Perhitungan Akar \n");
 	printf("Masukkan angka : ");
     scanf("%d", &angka);
-    printf("Masukkan akar : ");
+    printf("Masukkan akar  : ");
     scanf("%d", &p);
     hasil = akar(angka, p);
-    printf("Akar %d dari %d adalah %.3f \n ", p, angka, hasil);
+   	printf("%d akar %d adalah %.3f \n ", angka, p, hasil);
 }
 
 int nilaimutlak(int x)
