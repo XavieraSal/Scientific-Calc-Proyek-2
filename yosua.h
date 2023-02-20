@@ -1,9 +1,11 @@
 /*header */
+#ifndef yosua_h
 #include <stdio.h>
 #include <conio.h>
-float penjumlahan(float x, float y);
-float pengurangan(float x, float y);
-float perkalian(float x, float y);
-float pembagian(float x, float y);
+double penjumlahan(double x, double y);
+double pengurangan(double x, double y);
+double perkalian(double x, double y);
+double pembagian(double x, double y);
 int modulus(int x, int y);
 
+#endif

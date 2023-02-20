@@ -3,10 +3,12 @@
 #include <stdlib.h>
 #include <math.h>
 
+char perpangkatan();
 int pangkat (int x, int y);
 float akar(int angka, int p);
 float logBasis10(double n);
 int nilaimutlak(int x);
+
 
 void pilihan();
 void pangkat2();

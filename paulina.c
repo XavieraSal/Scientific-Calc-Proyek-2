@@ -3,9 +3,12 @@
 #include "paulina.h"
 #include <math.h>
 
-int main (void){
-	pilihan();
-}
+//int main (void){
+//	pilihan();
+//}
+
+
+
 
 void pilihan(){
 	int menu;
@@ -53,7 +56,7 @@ int pangkat (int x, int y)
 {
 	int p;
 	int hasil=1;
-	for(p=1;p<=y;p++){
+	 for(p=1;p<=y;p++){
         hasil=hasil*x;
     }
     return hasil;
@@ -90,7 +93,7 @@ void akarsemua()
     printf("Masukkan akar  : ");
     scanf("%d", &p);
     hasil = akar(angka, p);
-   	printf("%d akar %d adalah %.3f \n ", angka, p, hasil);
+    printf("%d akar %d adalah %.3f \n ", angka, p, hasil);
 }
 
 int nilaimutlak(int x)

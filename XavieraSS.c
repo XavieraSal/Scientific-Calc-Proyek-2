@@ -1,13 +1,13 @@
 #include "XavieraSS.h"
 
 
-int main(void){
-InversSin ();
-InversCos ();
-InversTan ();
-logNatural ();
-Turunan ();
-}
+//int main(void){
+//InversSin ();
+//InversCos ();
+//InversTan ();
+//logNatural ();
+//Turunan ();
+//}
 
 
 /* # mencari nilai sin invers */

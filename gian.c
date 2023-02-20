@@ -142,6 +142,22 @@ int faktorial(int n) {
     }
 }
 
+int integral()
+{
+	float a,b,c,j,i;
+	printf("Bentuk Umum (ax^2) + (bx) + (c)\n");
+    printf("Masukkan nilai a : ");
+    scanf("%f",&a);
+    printf("Masukkan nilai b : ");
+    scanf("%f",&b);
+    printf("Masukkan nilai c : ");
+    scanf("%f",&c);
+    printf("\n""\n");
+    i=a/3;
+    j=b/2;
+    printf("Integralnya ialah : (%.2fx^3)+(%.2fx^2) + (%.2fx)",i,j,c);
+}
+
 //	int faktorial = 1, angka, i;
 //	if (angka < 0) {
 //        printf(" Maaf, faktorial hanya dapat dihitung untuk bilangan bulat positif.\n");
@@ -153,9 +169,29 @@ int faktorial(int n) {
 //	return 0;
 //}
 //}
-void main()
-{	char ulang='y';
-	while (ulang=='y'){
+
+void turunan()
+{
+	float a,b,c,t;
+	printf("Bentuk Umum (ax^2) + (bx) + (c)\n");
+    printf("Masukkan nilai a : ");
+    scanf("%f",&a);
+    printf("Masukkan nilai b : ");
+    scanf("%f",&b);
+    printf("Masukkan nilai c : ");
+    scanf("%f",&c);
+//    printf("\n""\n");
+    printf("Fungsinya Adalah :  %.2fx^2  +  %.2fx  +  %.2f ",a,b,c);
+    printf("\n");
+    t=a*2;
+    printf("Turunannya adalah   :  %.2fx  +  %.2f  + 0\n",t,b);
+}
+
+void trigonometri()
+{	
+
+//	char ulang='y';
+//	while (ulang=='y'){
 	
 	system("cls");
 	switch(menu())
@@ -178,15 +214,22 @@ void main()
 		case 6: cosec();
 		break;
 	 
-	 	case 7: factorial();
-	 	break;
+//	 	case 7: factorial();
+//	 	break;
+//	 	
+//	 	case 8: turunan();
+//	 	break;
+//	 	
+//	 	case 9: integral();
+//	 	break;
 	 } 
 	
-	printf("\n\n\n Kembali ke menu? y (ya) / n (tidak) :  ");
-	ulang = getch();
-	system("cls");
-	printf("%d",ulang);
-	}
+//	printf("\n\n\n Kembali ke menu? y (ya) / n (tidak) :  ");
+//	ulang = getch();
+//	system("cls");
+//	printf("%d",ulang);
+//	}
+
 }
 
 int menu()
@@ -198,8 +241,10 @@ int menu()
     printf("\n 4. Cotan"); 
 	printf("\n 5. Secan"); 
 	printf("\n 6. Cosec"); 
-	printf("\n 7. Faktorial"); 
-	printf("\n\ menu : "); 
+//	printf("\n 7. Faktorial");
+//	printf("\n 8. Turunan");
+//	printf("\n 9. Integral");
+	printf("\n\n menu : "); 
     scanf("%d", &list);
     return list;
 }

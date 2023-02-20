@@ -3,29 +3,29 @@
 #include "AuliaAziizah.h"
 #define maks 10
 
-int main(){
-	int pilih;
-	menu :
-		printf("Operasi Matriks \n");
-		printf("1. Konversi\n");
-		printf("2. Matriks\n");
-		printf("Input Pilihan Nomor Menu :  ");scanf("%d", &pilih); 
-		switch(pilih){
-			case 1:menuKonversi();
-				break;
-			case 2:menuMatriks();
-				break;
-			default:printf("Mohon Maaf Pilihan Anda Salah !");
-				getche();
-	}
-
-	return 0;
-}
+//int main(){
+//	int pilih;
+//	menu :
+//		printf("Operasi Matriks \n");
+//		printf("1. Konversi\n");
+//		printf("2. Matriks\n");
+//		printf("Input Pilihan Nomor Menu :  ");scanf("%d", &pilih); 
+//		switch(pilih){
+//			case 1:menuKonversi();
+//				break;
+//			case 2:menuMatriks();
+//				break;
+//			default:printf("Mohon Maaf Pilihan Anda Salah !");
+//				getche();
+//	}
+//
+//	return 0;
+//}
 
 void menuKonversi(){
 	int pilih;
 	menu:
-		system("cls");
+//		system("cls");
 		printf("\t\t\t\t\t\t   ================================================================       \n");
 		printf("\t\t\t\t\t\t  |                            KONVERSI                            |      \n");
 		printf("\t\t\t\t\t\t   ================================================================       \n");
@@ -85,6 +85,7 @@ void menuKonversiPanjang(){
 	int pilih;
 	menu:
 		system("cls");
+		tampil_kel();
 		printf("\t\t\t\t\t\t   ================================================================       \n");
 		printf("\t\t\t\t\t\t  |                         KONVERSI PANJANG                       |      \n");
 		printf("\t\t\t\t\t\t   ================================================================       \n");
@@ -128,6 +129,7 @@ void menuKonversiWaktu(){
 	int pilih;
 	menu:
 		system("cls");
+		tampil_kel();
 		printf("\t\t\t\t\t\t   ================================================================       \n");
 		printf("\t\t\t\t\t\t  |                          KONVERSI WAKTU                        |      \n");
 		printf("\t\t\t\t\t\t   ================================================================       \n");
@@ -160,6 +162,7 @@ void menuKonversiLuas(){
 	int pilih;
 	menu:
 		system("cls");
+		tampil_kel();
 		printf("\t\t\t\t\t\t   ================================================================       \n");
 		printf("\t\t\t\t\t\t  |                           KONVERSI LUAS                        |      \n");
 		printf("\t\t\t\t\t\t   ================================================================       \n");
