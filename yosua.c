@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "yosua.h"
-void tambah_bagi(float * x,float * y ){
+double tambah_bagi(double * x,double * y ){
     printf("==============================\n");
 	printf("Masukan nilai Pertama =");
 	
@@ -10,7 +10,7 @@ void tambah_bagi(float * x,float * y ){
 
 }
 
-void modul (int * x,int * y ){
+int modul (int * x,int * y ){
 	printf("============================\n");
 	printf("Masukan nilai Pertama =");
 	scanf("%d",&*x);
@@ -77,24 +77,3 @@ int main() {
 	
 	return 0;
 }
-
-float penjumlahan(float x, float y){
-	return x+y;
-}
-
-float pengurangan(float x, float y){
-	return x-y;
-}
-
-float perkalian(float x, float y){
-	return x*y;
-}
-
-float pembagian(float x, float y){
-	return x/y;
-}
-
-int modulus(int x, int y){
-	return x%y;
-}
-  
