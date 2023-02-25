@@ -25,11 +25,11 @@ int main() {
 	float c,d,hasil;
 	
 	printf("==================\n");
-	printf("1. Penjumlahan\n");
-	printf("2. Pengurangan\n");
-	printf("3. Perkalian\n");
-	printf("4. Pembagian\n");
-	printf("5. Modulus\n");
+	printf("1. +\n");
+	printf("2. -\n");
+	printf("3. *\n");
+	printf("4. /\n");
+	printf("5. Mod\n");
 	printf("==================\n");
 	printf("Pilih Menu Diatas:"); scanf("%d", &menu);
 	printf("\n");
