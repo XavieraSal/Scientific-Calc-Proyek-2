@@ -92,17 +92,17 @@ void hasilKonversiKm(float nilai){
 	float hm, dam, m, dm, cm, mm;
 	
 	hm = konversiKmKeHm(nilai);
-	printf("%.2f Km = %.2f Hm\n", nilai, hm);
+	printf("%.2f Km = %f Hm\n", nilai, hm);
 	dam = konversiKmKeDam(nilai);
-	printf("%.2f Km = %.2f Dam\n", nilai, dam);
+	printf("%.2f Km = %f Dam\n", nilai, dam);
 	m = konversiKmKeM(nilai);
-	printf("%.2f Km = %.2f M\n", nilai, m);
+	printf("%.2f Km = %f M\n", nilai, m);
 	dm = konversiKmKeDm(nilai);
-	printf("%.2f Km = %.2f Dm\n", nilai, dm);
+	printf("%.2f Km = %f Dm\n", nilai, dm);
 	cm = konversiKmKeCm(nilai);
-	printf("%.2f Km = %.2f Cm\n", nilai, cm);
+	printf("%.2f Km = %f Cm\n", nilai, cm);
 	mm = konversiKmKeMm(nilai);
-	printf("%.2f Km = %.2f Mm\n", nilai, mm);
+	printf("%.2f Km = %f Mm\n", nilai, mm);
 }
 
 float konversiHmKeKm(float nilai){
@@ -139,17 +139,17 @@ void hasilKonversiHm(float nilai){
 	float km, dam, m, dm, cm, mm;
 	
 	km = konversiHmKeKm(nilai);
-	printf("%.2f Hm = %.2f Km\n", nilai, km);
+	printf("%.2f Hm = %f Km\n", nilai, km);
 	dam = konversiHmKeDam(nilai);
-	printf("%.2f Hm = %.2f Dam\n", nilai, dam);
+	printf("%.2f Hm = %f Dam\n", nilai, dam);
 	m = konversiHmKeM(nilai);
-	printf("%.2f Hm = %.2f M\n", nilai, m);
+	printf("%.2f Hm = %f M\n", nilai, m);
 	dm = konversiHmKeDm(nilai);
-	printf("%.2f Hm = %.2f Dm\n", nilai, dm);
+	printf("%.2f Hm = %f Dm\n", nilai, dm);
 	cm = konversiHmKeCm(nilai);
-	printf("%.2f Hm = %.2f Cm\n", nilai, cm);
+	printf("%.2f Hm = %f Cm\n", nilai, cm);
 	mm = konversiHmKeMm(nilai);
-	printf("%.2f Km = %.2f Mm\n", nilai, mm);
+	printf("%.2f Km = %f Mm\n", nilai, mm);
 }
 
 float konversiDamKeKm(float nilai){
@@ -186,17 +186,17 @@ void hasilKonversiDam(float nilai){
 	float km, hm, m, dm, cm, mm;
 	
 	km = konversiDamKeKm(nilai);
-	printf("%.2f Dam = %.2f Km\n", nilai, km);
+	printf("%.2f Dam = %f Km\n", nilai, km);
 	hm = konversiDamKeHm(nilai);
-	printf("%.2f Dam = %.2f Hm\n", nilai, hm);
+	printf("%.2f Dam = %f Hm\n", nilai, hm);
 	m = konversiDamKeM(nilai);
-	printf("%.2f Dam = %.2f M\n", nilai, m);
+	printf("%.2f Dam = %f M\n", nilai, m);
 	dm = konversiDamKeDm(nilai);
-	printf("%.2f Dam = %.2f Dm\n", nilai, dm);
+	printf("%.2f Dam = %f Dm\n", nilai, dm);
 	cm = konversiDamKeCm(nilai);
-	printf("%.2f Dam = %.2f Cm\n", nilai, cm);
+	printf("%.2f Dam = %f Cm\n", nilai, cm);
 	mm = konversiDamKeMm(nilai);
-	printf("%.2f Dam = %.2f Mm\n", nilai, mm);
+	printf("%.2f Dam = %f Mm\n", nilai, mm);
 }
 
 float konversiMKeKm(float nilai){
@@ -233,17 +233,17 @@ void hasilKonversiM(float nilai){
 	float km, hm, dam, dm, cm, mm;
 	
 	km = konversiMKeKm(nilai);
-	printf("%.2f M = %.2f Km\n", nilai, km);
+	printf("%.2f M = %f Km\n", nilai, km);
 	hm = konversiMKeHm(nilai);
-	printf("%.2f M = %.2f Hm\n", nilai, hm);
+	printf("%.2f M = %f Hm\n", nilai, hm);
 	dam = konversiMKeDam(nilai);
-	printf("%.2f M = %.2f Dam\n", nilai, dam);
+	printf("%.2f M = %f Dam\n", nilai, dam);
 	dm = konversiMKeDm(nilai);
-	printf("%.2f M = %.2f Dm\n", nilai, dm);
+	printf("%.2f M = %f Dm\n", nilai, dm);
 	cm = konversiMKeCm(nilai);
-	printf("%.2f M = %.2f Cm\n", nilai, cm);
+	printf("%.2f M = %f Cm\n", nilai, cm);
 	mm = konversiMKeMm(nilai);
-	printf("%.2f M = %.2f Mm\n", nilai, mm);
+	printf("%.2f M = %f Mm\n", nilai, mm);
 }
 
 float konversiDmKeKm(float nilai){
@@ -280,17 +280,17 @@ void hasilKonversiDm(float nilai){
 	float km, hm, dam, m, cm, mm;
 
 	km = konversiDmKeKm(nilai);
-	printf("%.2f Dm = %.2f Km\n", nilai, km);
+	printf("%.2f Dm = %f Km\n", nilai, km);
 	hm = konversiDmKeHm(nilai);
-	printf("%.2f Dm = %.2f Hm\n", nilai, hm);
+	printf("%.2f Dm = %f Hm\n", nilai, hm);
 	dam = konversiDmKeDam(nilai);
-	printf("%.2f Dm = %.2f Dam\n", nilai, dam);
+	printf("%.2f Dm = %f Dam\n", nilai, dam);
 	m = konversiDmKeM(nilai);
-	printf("%.2f Dm = %.2f M\n", nilai, m);
+	printf("%.2f Dm = %f M\n", nilai, m);
 	cm = konversiDmKeCm(nilai);
-	printf("%.2f Dm = %.2f Cm\n", nilai, cm);
+	printf("%.2f Dm = %f Cm\n", nilai, cm);
 	mm = konversiDmKeMm(nilai);
-	printf("%.2f Dm = %.2f Mm\n", nilai, mm);
+	printf("%.2f Dm = %f Mm\n", nilai, mm);
 }
 
 float konversiCmKeKm(float nilai){
@@ -327,17 +327,17 @@ void hasilKonversiCm(float nilai){
 	float km, hm, dam, m, dm, mm;
 	
 	km = konversiCmKeKm(nilai);
-	printf("%.2f Cm = %.2f Km\n", nilai, km);
+	printf("%.2f Cm = %f Km\n", nilai, km);
 	hm = konversiCmKeHm(nilai);
-	printf("%.2f Cm = %.2f Hm\n", nilai, hm);
+	printf("%.2f Cm = %f Hm\n", nilai, hm);
 	dam = konversiCmKeDam(nilai);
-	printf("%.2f Cm = %.2f Dam\n", nilai, dam);
+	printf("%.2f Cm = %f Dam\n", nilai, dam);
 	m = konversiCmKeM(nilai);
-	printf("%.2f Cm = %.2f M\n", nilai, m);
+	printf("%.2f Cm = %f M\n", nilai, m);
 	dm = konversiCmKeDm(nilai);
-	printf("%.2f Cm = %.2f Dm\n", nilai, dm);
+	printf("%.2f Cm = %f Dm\n", nilai, dm);
 	mm = konversiCmKeMm(nilai);
-	printf("%.2f Cm = %.2f Mm\n", nilai, mm);
+	printf("%.2f Cm = %f Mm\n", nilai, mm);
 }
 
 float konversiMmKeKm(float nilai){
@@ -374,17 +374,17 @@ void hasilKonversiMm(float nilai){
 	float km, hm, dam, m, dm, cm;
 	
 	km = konversiMmKeKm(nilai);
-	printf("%.2f Mm = %.2f Km\n", nilai, km);
+	printf("%.2f Mm = %f Km\n", nilai, km);
 	hm = konversiMmKeHm(nilai);
-	printf("%.2f Mm = %.2f Hm\n", nilai, hm);
+	printf("%.2f Mm = %f Hm\n", nilai, hm);
 	dam = konversiMmKeDam(nilai);
-	printf("%.2f Mm = %.2f Dam\n", nilai, dam);
+	printf("%.2f Mm = %f Dam\n", nilai, dam);
 	m = konversiMmKeM(nilai);
-	printf("%.2f Mm = %.2f M\n", nilai, m);
+	printf("%.2f Mm = %f M\n", nilai, m);
 	dm = konversiMmKeDm(nilai);
-	printf("%.2f Mm = %.2f Dm\n", nilai, dm);
+	printf("%.2f Mm = %f Dm\n", nilai, dm);
 	cm = konversiMmKeCm(nilai);
-	printf("%.2f Mm = %.2f Cm\n", nilai, cm);
+	printf("%.2f Mm = %f Cm\n", nilai, cm);
 }
 
 /*Konversi Waktu*/
@@ -1011,55 +1011,4 @@ void matriksPerkalianSkalar(){
         printf("\n");
     }
 }
-#endif
-onversiKmKeMm(float km);
-void hasilKonversiKm();
-
-float konversiHmKeKm(float hm);
-float konversiHmKeDam(float hm);
-float konversiHmKeM(float hm);
-float konversiHmKeDm(float hm);
-float konversiHmKeCm(float hm);
-float konversiHmKeMm(float hm);
-void hasilKonversiHm();
-
-float konversiDamKeKm(float dam);
-float konversiDamKeDam(float dam);
-float konversiDamKeM(float dam);
-float konversiDamKeDm(float dam);
-float konversiDamKeCm(float dam);
-float konversiDamKeMm(float dam);
-void hasilKonversiDam();
-
-float konversiMKeKm(float m);
-float konversiMKeHm(float m);
-float konversiMKeDam(float m);
-float konversiMKeDm(float m);
-float konversiMKeCm(float m);
-float konversiMKeMm(float m);
-void hasilKonversiM();
-
-float konversiDmKeKm(float dm);
-float konversiDmKeHm(float dm);
-float konversiDmKeDam(float dm);
-float konversiDmKeM(float dm);
-float konversiDmKeCm(float dm);
-float konversiDmKeMm(float dm);
-void hasilKonversiDm();
-
-float konversiCmKeKm(float cm);
-float konversiCmKeHm(float cm);
-float konversiCmKeDam(float cm);
-float konversiCmKeM(float cm);
-float konversiCmKeDm(float cm);
-float konversiCmKeMm(float cm);
-void hasilKonversiCm();
-
-float konversiMmKeKm(float mm);
-float konversiMmKeHm(float mm);
-float konversiMmKeDam(float mm);
-float konversiMmKeM(float mm);
-float konversiMmKeDm(float mm);
-float konversiMmKeCm(float mm);
-void hasilKonversiMm();
 #endif
