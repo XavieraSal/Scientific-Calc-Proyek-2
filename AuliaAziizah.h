@@ -1,30 +1,5 @@
 #ifndef AuliaAziizah_h
 #include <stdlib.h>
-
-
-void menu();
-void menuKonversiPanjang();
-void menuKonversiSuhu();
-
-float konversiCelciusFahrenheit (float celcius);
-float konversiCelciusKelvin (float celcius);
-void hasilKonversiCelcius();
-
-float konversiFahrenheitCelcius(float fahrenheit);
-float konversiFahrenheitKelvin(float fahrenheit);
-void hasilKonversiFahrenheit();
-
-float konversiKelvinCelcius(float kelvin);
-float konversiKelvinFahrenheit(float kelvin);
-void hasilKonversiKelvin();
-
-float konversiKmKeHm(float km);
-float konversiKmKeDam(float km);
-float konversiKmKeM(float km);
-float konversiKmKeDm(float km);
-float konversiKmKeCm(float km);
-float k#ifndef AuliaAziizah_h
-#include <stdlib.h>
 #define maks 10
 
 /*Konversi Suhu*/
