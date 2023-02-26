@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+<<<<<<< HEAD
 int pangkat (int x, int y)
 {
 	int p;
@@ -54,6 +55,19 @@ float logBiasa(float n)
     hasil = logBasis10 (n);
     return hasil;
 }
+=======
+int pangkat (int x, int y);
+int akarkuadrad(int a);
+float logBasis10(double n);
+int akarkubik();
+int nilaimutlak(int x);
+
+void pangkat2();
+void akardua();
+void logBiasa();
+void akartiga();
+void mutlak();
+>>>>>>> 03985013bd0fda66f8b6888c42834a5357330d93
 
 #endif
 

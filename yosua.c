@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "yosua.h"
-void tambah_bagi(float * x,float * y ){
+double tambah_bagi(double * x,double * y ){
     printf("==============================\n");
 	printf("Masukan nilai Pertama =");
 	
@@ -10,7 +10,7 @@ void tambah_bagi(float * x,float * y ){
 
 }
 
-void modul (int * x,int * y ){
+int modul (int * x,int * y ){
 	printf("============================\n");
 	printf("Masukan nilai Pertama =");
 	scanf("%d",&*x);
@@ -25,11 +25,11 @@ int main() {
 	float c,d,hasil;
 	
 	printf("==================\n");
-	printf("1. Penjumlahan\n");
-	printf("2. Pengurangan\n");
-	printf("3. Perkalian\n");
-	printf("4. Pembagian\n");
-	printf("5. Modulus\n");
+	printf("1. +\n");
+	printf("2. -\n");
+	printf("3. *\n");
+	printf("4. /\n");
+	printf("5. Mod\n");
 	printf("==================\n");
 	printf("Pilih Menu Diatas:"); scanf("%d", &menu);
 	printf("\n");
@@ -53,7 +53,7 @@ int main() {
 			tambah_bagi(&c,&d);
 			hasil = perkalian(c, d);
 			printf("Hasil Perkalian : %f", hasil);
-		    printf("\n============================");
+		    printf("\n=============================");
 			break;
 		case 4:
 			tambah_bagi(&c,&d);
@@ -77,24 +77,3 @@ int main() {
 	
 	return 0;
 }
-
-float penjumlahan(float x, float y){
-	return x+y;
-}
-
-float pengurangan(float x, float y){
-	return x-y;
-}
-
-float perkalian(float x, float y){
-	return x*y;
-}
-
-float pembagian(float x, float y){
-	return x/y;
-}
-
-int modulus(int x, int y){
-	return x%y;
-}
-  
