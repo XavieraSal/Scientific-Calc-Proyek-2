@@ -815,31 +815,31 @@ void hasilKonversiMm2(float nilai){
 }
 
 ///*Matriks*/
-void menuMatriks(){
-	int pilih;
-	system("cls");
-	printf("Operasi Matriks \n");
-	printf("1. Penjumlahan\n");
-	printf("2. Pengurangan\n");	
-	printf("3. Perkalian\n");
-	printf("4. Perkalian Skalar\n");
-	printf("5. Transpose\n");
-	printf("Pilih : ");
-	scanf("%d", &pilih);
-	switch(pilih){
-		case 1:matriksPenjumlahan();
-			break;
-		case 2:matriksPengurangan();
-			break;
-		case 3:matriksPerkalian();
-			break;
-		case 4:matriksPerkalianSkalar();
-			break;
-		case 5:transposeMatriks();
-			break;
-    getch();
-	}
-}
+//void menuMatriks(){
+//	int pilih;
+//	system("cls");
+//	printf("Operasi Matriks \n");
+//	printf("1. Penjumlahan\n");
+//	printf("2. Pengurangan\n");	
+//	printf("3. Perkalian\n");
+//	printf("4. Perkalian Skalar\n");
+//	printf("5. Transpose\n");
+//	printf("Pilih : ");
+//	scanf("%d", &pilih);
+//	switch(pilih){
+//		case 1:matriksPenjumlahan();
+//			break;
+//		case 2:matriksPengurangan();
+//			break;
+//		case 3:matriksPerkalian();
+//			break;
+//		case 4:matriksPerkalianSkalar();
+//			break;
+//		case 5:transposeMatriks();
+//			break;
+//    getch();
+//	}
+//}
 
 void matriksPenjumlahan(){
 	int i, j, x, y, matriks1[maks][maks], matriks2[maks][maks], hasilPenjumlahan[maks][maks];

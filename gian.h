@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-#define phi 3.14159265
+//#define phi 3.14159265
 
 double hasil, radian;
 
@@ -33,20 +33,18 @@ double trigonometri(char operation[], char a[]) {
     return hasil;
 }
 
-int faktorial(int n) {
+double faktorial(double n) {
 	int i, fact = 1;
 
-    printf(" %d! = ", n);
+
 
     for (i = 1; i <= n; i++) {
-        printf(" %d", i);
-        if (i < n) {
-            printf(" x ");
-        }
+
+       
         fact *= i;
     }
 
-    printf(" = %d\n", fact);
+
 
     return fact;
 }
