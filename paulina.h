@@ -12,36 +12,6 @@ int pangkat(int x, int y)
     return hasil;
 }
 
-//int pangkat2(int x, int y){
-//	int hasil;
-//	
-//	hasil = pangkat(x, y);
-//    return hasil;
-//}
-
-//float akar(int angka, int p)
-//{	
-//	float hasil;
-//	hasil = pow (angka, 1.0/p);
-//	return hasil;
-//}
-
-//float akar(int x, int y)
-//{ 
-//	int angka, p;
-//	float hasil;
-//    hasil = akar(angka, p);
-//    return hasil;
-//}
-
-//double akar(int x, int y)
-//{
-//	float hasil;
-//	int angka, p;
-//	hasil = akar(angka, p);
-//	return hasil;
-//}
-
 double akar2 (double x) {
     double epsilon, hasil = x;
 
@@ -52,17 +22,13 @@ double akar2 (double x) {
     return hasil;
 }
 
-//int nilaimutlak(int x)
-//{
-//	int hasil;
-//	hasil = abs(x);
-//	return hasil;    
-//}
-
-double mutlak (double k) {
-	int x, hasil;
-  	hasil = x < 0 * -x; 
-	return hasil;
+int mutlak(int angka) {
+   if (angka < 0) {
+      return -angka;
+   }
+   else {
+      return angka;
+   }
 }
 
 
