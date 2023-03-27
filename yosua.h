@@ -33,9 +33,11 @@ int modulus(int x,int y){
 	return  x%y;
 }
 
-float persent (float desimal)
+double persent (double desimal)
 {
 	return desimal/100;
 }
 #endif
+
+
 
