@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "paulina.h"
 
+<<<<<<< HEAD
 int main (void){
 	pilihan();
 }
@@ -56,52 +55,15 @@ void perpangkatan()
 {
 	int x,y;
 	int hasil;
+=======
+int main(){
+	char operasi[10];
+	float angka;
+>>>>>>> 5f535f3ac23885fab1af94d71fb5fcab0d689df7
 	
-	printf(" Perhitungan Pangkat \n");
-	printf("Masukkan angka   : ");
-    scanf("%d", &x);
-    printf("Pangkat          : ");
-    scanf("%d", &y);
-	hasil = pangkat(x, y);
-    printf("Hasilnya adalah  : %d", hasil);
+	scanf("%s %f", operasi, &angka);
+	if(strstr(operasi, "log")){
+		sscanf(operasi, "log %f", &angka);
+		return logBiasa(angka);
+	}
 }
-
-double akar2 (double x)
-{
-    double epsilon, hasil = x;
-
-    while ((hasil - x / hasil) > epsilon) {
-        hasil = (hasil + x / hasil) / 2;
-    }
-
-    return hasil;
-}
-
-void akar()
-{
-	double x;
-	float hasil;
-    printf("Masukkan angka: ");
-    scanf("%lf", &x);
-    hasil = akar2(x);
-    printf("Akar dari %.2f adalah %.6f\n", x, hasil);
-}
-
-int nilaimutlak(int angka) 
-{
-   if (angka < 0) {
-      return -angka;
-   }
-   else {
-      return angka;
-   }
-}
-   
-void mutlak()
-{
-	int angka;
-   	printf("Masukkan angka: ");
-  	scanf("%d", &angka);
-	printf("Nilai mutlak dari %d adalah %d", angka, nilaimutlak(angka));
-}
-
