@@ -19,9 +19,6 @@ void pilihan(){
 	printf("\t\t\t\t\t                                    ----------------                                      \n");
 	printf("\t\t\t\t\t                                   (3) Mutlak                                             \n");
 	printf("\t\t\t\t\t                                    ----------------                                      \n");
-	printf("\t\t\t\t\t                                    ----------------                                      \n");
-	printf("\t\t\t\t\t                                   (4) Logaritma 10                                       \n");
-	printf("\t\t\t\t\t                                    ----------------                                      \n");
 	printf("\t\t\t\t\t ==================================================================================       \n");
 	printf("\t\t\t\t\t                                       PILIHAN : ");
 	scanf("%d", &menu);
@@ -38,9 +35,6 @@ void pilihan(){
 		case 3:
 			mutlak();
 			break;
-//		case 4:
-//			logBiasa();
-//			break;
 		default:
 			printf("\t\t\t\t\t Mohon maaf pilihan anda salah! ");
 			getche();
