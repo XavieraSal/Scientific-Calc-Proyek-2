@@ -157,7 +157,6 @@ void matriksPerkalian();
 void transposeMatriks();
 void matriksPerkalianSkalar()
 
-
 /*exponensial*/
 float exponensial(float nilai, float pangkat);
 

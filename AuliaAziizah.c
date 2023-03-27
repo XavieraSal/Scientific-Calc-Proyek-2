@@ -1058,6 +1058,7 @@ double logaritmaBebas(double nilai, double basis){
 	return hasil;
 }
 
+
 int main(){
 	char satuan[10];
     float nilai;
