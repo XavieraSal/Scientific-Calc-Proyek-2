@@ -1,79 +1,124 @@
+#include <string.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include "yosua.h"
-double tambah_bagi(double * x,double * y ){
-    printf("==============================\n");
-	printf("Masukan nilai Pertama =");
-	
-	scanf("%f",&(*x));
-	printf("Masukan nilai Kedua =");
-	scanf("%f",&(*y));
-
-}
-
-int modul (int * x,int * y ){
-	printf("============================\n");
-	printf("Masukan nilai Pertama =");
-	scanf("%d",&*x);
-	printf("Masukan nilai Kedua =");
-	scanf("%d",&(*y));
-}
-
-
 
 int main() {	
-	int menu, a, b, result;
-	float c,d,hasil;
+	double x, y, hasil;
+	float desimal, hasil2;
+	double a,  result;
+	char c[100],d;
+	char *p;
+	int i;
+	fgets(c,sizeof(c),stdin); 
+	i =0;
 	
-	printf("==================\n");
-	printf("1. +\n");
-	printf("2. -\n");
-	printf("3. *\n");
-	printf("4. /\n");
-	printf("5. Mod\n");
-	printf("==================\n");
-	printf("Pilih Menu Diatas:"); scanf("%d", &menu);
-	printf("\n");
+	p=strtok(c," "); 
 	
-
-
-	switch(menu) {
-		case 1:
-			tambah_bagi(&c,&d);
-			hasil = penjumlahan(c, d);
-			printf("Hasil Penjumlahan : %f", hasil);
-		    printf("\n==============================");
-			break;
-		case 2:
-			tambah_bagi(&c,&d);
-			hasil = pengurangan(c, d);
-			printf("Hasil Pengurangan : %f", hasil);
-		    printf("\n==============================");	
-			break;
-		case 3:
-			tambah_bagi(&c,&d);
-			hasil = perkalian(c, d);
-			printf("Hasil Perkalian : %f", hasil);
-		    printf("\n=============================");
-			break;
-		case 4:
-			tambah_bagi(&c,&d);
-			hasil = pembagian(c, d);
-			printf("Hasil Pembagian : %f", hasil);
-			printf("\n=============================");
-			break;
-		case 5:
-			modul(&a,&b);
-			result = modulus(a,b);
-			printf("Hasil Modulus :%d", result);
-		  	printf("\n============================");
-			break;
-		default:
-			printf("============================");
-			printf("\nMaaf pilihan anda salah");
-			printf("\n============================");
+	while(p!=NULL){ 
+		
+		if(isdigit(p[0])){ 
 			
+			if(i%2==0){ 
+				printf("%s",p);
+				x=atof(p); 
+				i++; 
+			}
+			
+			else{
+				printf("%s",p);
+				y=atof(p);
+				i++;
+			}
+			
+		}
+		
+		else {
+			
+			d=p[0];
+			
+		}
+		
+		p=strtok(NULL, " ");
+		
+		
+		
 	}
-	
-	
+	printf("%lf",x);
+	printf("%c",d);
+	printf("%lf",y);
+	switch(d){
+		
+		case '+':
+			(&x,&y);
+		hasil = penjumlahan (x,y);
+		printf("\nHasil penjumlahan: %lf",hasil);
+		break;
+		case '-':
+			(&x,&y);
+			hasil = pengurangan (x,y);
+			printf("\nHasil pengurangan: %lf",hasil);
+			break;
+		case '*':
+			(&x,&y);
+			hasil=perkalian (x,y);
+			printf("\nHasil perkalian: %lf",hasil);
+			break;
+		case '/':
+			(&x,&y);
+			hasil = pembagian (x,y);
+			printf("\nHasil bagi: %lf",hasil);
+			break;
+		case 'm':
+			(&x,&y);
+			hasil2=modulus(x,y);
+			printf("\nHasil modulus:%f",hasil2);
+			break;
+		case '%':
+		
+			result = persent(x);
+			printf("\nHasill presentas: %lf",result);
+			break;
+		
+	}
+//	printf("Masukan nilai pertama: ");
+//	scanf("%lf", &x);
+//	
+//	printf("Masukan nilai kedua: ");
+//	scanf("%lf", &y);
+//	
+//	hasil = penjumlahan(x, y);
+//	printf("Hasil penjumlahan: %lf\n", hasil);
+//	
+//	hasil = pengurangan(x, y);
+//	printf("Hasil pengurangan: %lf\n", hasil);
+//	
+//	hasil = perkalian(x, y);
+//	printf("Hasil perkalian: %lf\n", hasil);
+//	
+//	hasil = pembagian(x, y);
+//	printf("Hasil pembagian: %lf\n", hasil);
+//	
+//	printf("Masukan nilai pertama untuk modul: ");
+//	scanf("%d", &a);
+//	
+//	printf("Masukan nilai kedua untuk modul: ");
+//	scanf("%d", &b);
+//	
+//	result = modulus(a, b);
+//	printf("Hasil modulus: %d\n", result);
+//	
+//	printf("Masukan angka desimal untuk persentase: ");
+//	scanf("%f", &desimal);
+//	
+//	hasil2 = persent(desimal);
+//	printf("Hasil persentase: %f\n", hasil2);
+//	
 	return 0;
 }
+
+
+
+
+
+

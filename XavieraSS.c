@@ -1,130 +1,77 @@
 #include "XavieraSS.h"
 
-
-int main(void){
-InversSin ();
-InversCos ();
-InversTan ();
-logNatural ();
-}
-
-
-/* # mencari nilai sin invers */
-
-void InversSin ()
-{
-	double n, result;
-	printf("\nInvers Sin: ");   
-    printf("\nMasukkan sebuah angka: ");                
-    scanf("%lf",&n);
-    if(n>1 || n<-1)  //tidak di dalam range
-    {
-        printf("Tidak di dalam range");
+float AkarKuadrat(float x) {
+    float hasil = x;
+    float epsilon = 0.000001;
+    while ((hasil - x / hasil) > epsilon) {
+        hasil = (hasil + x / hasil) / 2.0;
     }
-    else
-    {
-        result = InversSinRad (n);
-        printf("Inverse dari sin(%.2f) = %.2lf dalam radian\n", n, result);
+    return hasil;
+}
 
-
-        result = InversSinDrjt (n);    
-        printf("Inverse dari sin(%.2f) = %.2lf dalam derajat\n", n, result);
+double arctan(double x) {
+    double hasil = 0.0;
+    double sign = 1.0;
+    double pangkat = x;
+    double penyebut = 1.0;
+    double suku = pangkat / penyebut;
+    if (x > 1.0) {
+        return PI / 2.0 - arctan(1.0 / x);
+    } else if (x >= 0 && x <= 1.0) {
+        while (suku > 0.0000000001) {
+            hasil += sign * suku;
+            sign = -sign;
+            pangkat = pangkat * x * x;
+            penyebut += 2.0;
+            suku = pangkat / penyebut;
+        }
+        return hasil;
+    } else if (x < 0 && x >= -1.0) {
+        return -arctan(-x);
+    } else {
+        return -PI / 2.0 + arctan(1.0 / (-x));
     }
+    return hasil;
 }
 
-float InversSinRad(double n)
-{
-	return asin(n);
-    
-}
-
-float InversSinDrjt (double n)
-{
-	return asin(n)*180/phi;
-}  
-
-
-/* # mencari nilai cos invers */
-
-void InversCos()
-{
-	double n, result;  
-	printf("\nInvers Cos: "); 
-    printf("\nMasukkan sebuah angka: ");                
-    scanf("%lf",&n);
-    if(n>1 || n<-1)  //tidak di dalam range
-    {
-        printf("Tidak di dalam range");
+double arcsin(double x) {
+    if (x < -1.0 || x > 1.0) {
+        return 0; // Input diluar jangkauan
     }
-    else
-    {
-        result = InversCosRad(n);
-        printf("Invers dari cos(%.2f) = %.2lf dalam radian\n", n, result);
-
-
-        result = InversCosDrjt(n);    
-        printf("Inverse dari sin(%.2f) = %.2lf dalam derajat\n", n, result);
+    if (x == -1.0) {
+        return -1.57079632679; 
     }
-}
-
-float InversCosRad(double n)
-{
-	return acos(n);
-    
-}
-
-float InversCosDrjt (double n)
-{
-	return acos(n)*180/phi;
-}  
-
-/* Mencari nilai tan invers */
-
-void InversTan()
-{
-	double n, result;  
-	printf("\nInvers Tan: "); 
-    printf("\nMasukkan sebuah angka: ");                
-    scanf("%lf",&n);
-    
-    result = InversTanRad(n);
-    printf("\nInverse of tan(%.2f) = %.2f in radians", n, result);
-
-    result = InversTanDrjt (n);
-    printf("\nInverse of tan(%.2f) = %.2f in degrees", n, result);
-}
-
-float InversTanRad(double n)
-{
-	return atan(n);
-}
-
-float InversTanDrjt (double n)
-{
-	return (atan(n) * 180) / phi;
-}  
-
-/* # Logaritma Natural */
-
-void logNatural ()
-{
-	double n, result;
-	printf("\nLogaritma Natural: ");
-    printf("masukkan angka: ");
-    scanf("%lf", &n);
-    if(n<=0.0)
-    {
-    printf("angka yang dimasukkan harus lebih besar sama dengan dari 0.0\n");
+    if (x == 1.0) {
+        return 1.57079632679; 
     }
-    else
-    {
-    result = logaritmaNatural (n);
-    printf("\nResult = %lf", result);
+    double hasil = arctan(x / AkarKuadrat(1.0 - x * x));
+    return hasil;
+}
+
+double arccos(double x) {
+    return PI/2 - arcsin(x);
+}
+
+int main() {
+    char input[50], operator[10], nilai[10];
+    double x;
+    printf("Masukkan operasi invers trigonometri: ");
+    fgets(input, 50, stdin); 
+    sscanf(input, "%[^()] (%[^)])", operator, nilai); //pemisahan dari input
+    x = atof(nilai); //mengubah x agar bertipe double
+    double hasil;
+    if (strcmp(operator, "arcsin") == 0) {
+        hasil = arcsin(x);
+        printf("arcsin(%lf) = %lf\n", x, hasil);
+    } else if (strcmp(operator, "arctan") == 0) {
+        hasil = arctan(x);
+		printf("arctan(%lf) = %lf\n", x, hasil); 
+    } else if (strcmp(operator, "arccos") == 0) {
+        hasil = arccos(x);
+        printf("arccos(%lf) = %lf\n", x, hasil);  
+	} else {
+		printf ("Operasi tidak valid\n");	
 	}
-}
-
-float logaritmaNatural (double n)
-{
-	return log(n);
+	return 0;
 }
 
