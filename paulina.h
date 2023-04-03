@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int pangkat(int x, int y);
-double akar2 (double x);
+double akarsemua(double x, double n);
 int nilaimutlak(int angka);
 
 void pilihan();

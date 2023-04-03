@@ -72,25 +72,37 @@ void perpangkatan()
     printf("Hasilnya adalah  : %d", hasil);
 }
 
-double akar2 (double x)
+double akarsemua(double x, double n) 
 {
-    double epsilon, hasil = x;
+    double hasil = 1.0;
+    double delta = 0.00001;
+    double error = 1.0;
+    double precision = 0.00001;
 
-    while ((hasil - x / hasil) > epsilon) {
-        hasil = (hasil + x / hasil) / 2;
+    while (error > precision) {
+        double prevResult = hasil;
+        hasil = ((n - 1.0) * hasil + x / pow(hasil, n - 1)) / n;
+        error = (hasil - prevResult) / prevResult;
+        if (error < 0) {
+            error = -error;
+        }
+        if (error < delta) {
+            error = delta;
+        }
     }
-
     return hasil;
 }
 
 void akar()
 {
-	double x;
-	float hasil;
-    printf("Masukkan angka: ");
-    scanf("%lf", &x);
-    hasil = akar2(x);
-    printf("Akar dari %.2f adalah %.6f\n", x, hasil);
+	double base, hasil;
+    double n;
+    printf("Masukkan bilangan: ");
+    scanf("%lf", &base);
+    printf("Masukkan akar: ");
+    scanf("%lf", &n);
+    hasil = akarsemua(base, n);
+    printf("%.2lf akar %.2lf adalah: %.5lf\n", base, n, hasil);
 }
 
 int nilaimutlak(int angka) 
