@@ -8,7 +8,6 @@ double result, x;
 int n, i;
 double pow(double base, double exponent);
 double factorial(int n);
-double to_radians(double derajat);
 double sin(double x);
 double cos(double x);
 double tan(double x);
