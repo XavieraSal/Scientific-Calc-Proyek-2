@@ -22,51 +22,45 @@ double factorial(int n) {
 //}
 
 double sin(double x) {
-    const int n = 10;
-    double result = 0.0;
-//    x = to_radians(x);
-    for (int i = 0; i <= n; i++) {
-        double sign = i % 2 == 0 ? 1.0 : -1.0;
-        double numerator = pow(x, 2 * i + 1);
-        double denominator = factorial(2 * i + 1);
-        result += sign * numerator / denominator;
-        
+    const double PI = 3.14159265358979323846;
+    x = x - (int)(x / (2 * PI)) * 2 * PI; // convert x to the range [-2*PI, 2*PI]
+    double result = x;
+    double term = x;
+    int i;
+    for (i = 1; i <= 15; i++) {
+        term = -term * x * x / (2 * i) / (2 * i + 1);
+        result += term;
     }
     return result;
 }
 
 double cos(double x) {
-    const int n = 10;
-    double result = 0.0;
-//    x = to_radians(x);
-    for (int i = 0; i <= n; i++) {
-        double sign = i % 2 == 0 ? 1.0 : -1.0;
-        double numerator = pow(x, 2 * i);
-        double denominator = factorial(2 * i);
-        result += sign * numerator / denominator;
+    const double PI = 3.14159265358979323846;
+    x = x - (int)(x / (2 * PI)) * 2 * PI; // convert x to the range [-2*PI, 2*PI]
+    double result = 1;
+    double term = 1;
+    int i;
+    for (i = 1; i <= 15; i++) {
+        term = -term * x * x / (2 * i - 1) / (2 * i);
+        result += term;
     }
     return result;
 }
 
 double tan(double x) {
-    double sin_x = sin(x);
-    double cos_x = cos(x);
-    return sin_x / cos_x;
+    return sin(x) / cos(x);
 }
 
 double cot(double x) {
-    double tan_x = tan(x);
-    return 1.0 / tan_x;
+    return cos(x) / sin(x);
 }
 
 double csc(double x) {
-    double sin_x = sin(x);
-    return 1.0 / sin_x;
+    return 1 / sin(x);
 }
 
 double sec(double x) {
-    double cos_x = cos(x);
-    return 1.0 / cos_x;
+    return 1 / cos(x);
 }
 
 double faktorial(double n) {
