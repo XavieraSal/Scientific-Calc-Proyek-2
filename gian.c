@@ -51,7 +51,7 @@ double tan(double x) {
     return sin(x) / cos(x);
 }
 
-double cot(double x) {
+double cot(double x) { 
     return cos(x) / sin(x);
 }
 
