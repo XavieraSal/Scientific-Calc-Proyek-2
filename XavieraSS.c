@@ -36,7 +36,7 @@ double arctan(double x) {
 
 double arcsin(double x) {
     if (x < -1.0 || x > 1.0) {
-        return 0; // Input diluar jangkauan
+        return ERROR; // Input diluar jangkauan
     }
     if (x == -1.0) {
         return -1.57079632679; 
@@ -49,7 +49,47 @@ double arcsin(double x) {
 }
 
 double arccos(double x) {
-    return PI/2 - arcsin(x);
+   return PI/2 - arcsin(x);
+}
+
+double arccot(double x) {
+	double hasil;
+    if (x < 0) {
+        return arctan(1.0 / x) + PI;
+    } else if (x == 0) {
+        return PI / 2;
+    } else {
+        hasil=arctan(1.0 / x);
+	}
+    return hasil;
+}
+
+double arccsc (double x){
+	double hasil = arcsin(1.0 / x);
+	if (x > 0) {
+    	return hasil;
+    } else if (x < 0) {
+        return -arccsc(-x);
+    } else if (x==0){
+    	return ERROR;
+    }
+    return hasil;
+}
+
+double arcsec (double x){
+    double hasil;
+    if (x > 1) {
+        hasil = arccos(1.0 / x);
+    } else if (x < -1) {
+        hasil = PI - arccos(-1.0 / x);
+    } else if (x < 1 && x > -1) {
+        hasil = ERROR;
+    } else if (x == 1) {
+        hasil = 0.0;
+    } else if (x == -1) {
+        hasil = PI;
+    }
+    return hasil;
 }
 
 int main() {
@@ -62,13 +102,22 @@ int main() {
     double hasil;
     if (strcmp(operator, "arcsin") == 0) {
         hasil = arcsin(x);
-        printf("arcsin(%lf) = %lf\n", x, hasil);
+        printf("arcsin(%2.lf) = %lf\n", x, hasil);
     } else if (strcmp(operator, "arctan") == 0) {
         hasil = arctan(x);
-		printf("arctan(%lf) = %lf\n", x, hasil); 
+		printf("arctan(%2.lf) = %lf\n", x, hasil); 
     } else if (strcmp(operator, "arccos") == 0) {
         hasil = arccos(x);
-        printf("arccos(%lf) = %lf\n", x, hasil);  
+        printf("arccos(%2.lf) = %lf\n", x, hasil);  
+    } else if (strcmp(operator, "arccot") == 0) {
+        hasil = arccot(x);
+        printf("arccot(%2.lf) = %lf\n", x, hasil);
+    } else if (strcmp(operator, "arccsc") == 0) {
+        hasil = arccsc(x);
+        printf("arccsc(%2.lf) = %lf\n", x, hasil); 
+    } else if (strcmp(operator, "arcsec") == 0) {
+        hasil = arcsec(x);
+        printf("arcsec(%2.lf) = %lf\n", x, hasil); 
 	} else {
 		printf ("Operasi tidak valid\n");	
 	}
