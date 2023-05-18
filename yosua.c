@@ -1,4 +1,7 @@
 #include <string.h>
+
+
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "yosua.h"
@@ -81,39 +84,7 @@ int main() {
 			break;
 		
 	}
-//	printf("Masukan nilai pertama: ");
-//	scanf("%lf", &x);
-//	
-//	printf("Masukan nilai kedua: ");
-//	scanf("%lf", &y);
-//	
-//	hasil = penjumlahan(x, y);
-//	printf("Hasil penjumlahan: %lf\n", hasil);
-//	
-//	hasil = pengurangan(x, y);
-//	printf("Hasil pengurangan: %lf\n", hasil);
-//	
-//	hasil = perkalian(x, y);
-//	printf("Hasil perkalian: %lf\n", hasil);
-//	
-//	hasil = pembagian(x, y);
-//	printf("Hasil pembagian: %lf\n", hasil);
-//	
-//	printf("Masukan nilai pertama untuk modul: ");
-//	scanf("%d", &a);
-//	
-//	printf("Masukan nilai kedua untuk modul: ");
-//	scanf("%d", &b);
-//	
-//	result = modulus(a, b);
-//	printf("Hasil modulus: %d\n", result);
-//	
-//	printf("Masukan angka desimal untuk persentase: ");
-//	scanf("%f", &desimal);
-//	
-//	hasil2 = persent(desimal);
-//	printf("Hasil persentase: %f\n", hasil2);
-//	
+	
 	return 0;
 }
 
