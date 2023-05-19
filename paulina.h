@@ -15,7 +15,6 @@ void mutlak();
 
 void history() {
     FILE *file;
-    char operator;
     int result;
 
     // Buka file untuk ditulis (file akan dibuat jika belum ada)
@@ -26,13 +25,11 @@ void history() {
         return 1;
     }
     // Tulis riwayat operasi ke file
-    fprintf(file, "Operator: %c\n", operator);
     fprintf(file, "Hasil: %d\n", result);
 
     printf("Hasil: %d\n", result);
     printf("Riwayat operasi telah disimpan dalam file 'history.txt'.\n");
 
-    // Tutup file
     fclose(file);
 }
 
