@@ -13,53 +13,27 @@ void mutlak();
 
 #endif
 
-//#ifndef paulina_h
-//#include <stdio.h>
-//#include <stdlib.h>
-//
-//int pangkat(int x, int y)
-//{
-//	int p;
-//	int hasil=1;
-//	for(p=1;p<=y;p++){  //y pangkat
-//		hasil=hasil*x;				
-//    }
-//    return hasil;
-//}
-//
-//double akar2 (double x) {
-//    double epsilon, hasil = x;
-//
-//    while ((hasil - x / hasil) > epsilon) {
-//        hasil = (hasil + x / hasil) / 2;
-//    }
-//
-//    return hasil;
-//}
-//
-//int mutlak(int angka) {
-//   if (angka < 0) {
-//      return -angka;
-//   }
-//   else {
-//      return angka;
-//   }
-//}
-//
-//
-////float logBasis10(float n)
-////{
-////	return log10(n);
-////}
-//
-////float logBiasa(float n)
-////{
-////	float hasil;
-////	
-////    hasil = logBasis10 (n);
-////    return hasil;
-////}
-//
-//#endif
+void history() {
+    FILE *file;
+    char operator;
+    int result;
+
+    // Buka file untuk ditulis (file akan dibuat jika belum ada)
+    file = fopen("history.txt", "w");
+
+    if (file == NULL) {
+        printf("Gagal membuka file.");
+        return 1;
+    }
+    // Tulis riwayat operasi ke file
+    fprintf(file, "Operator: %c\n", operator);
+    fprintf(file, "Hasil: %d\n", result);
+
+    printf("Hasil: %d\n", result);
+    printf("Riwayat operasi telah disimpan dalam file 'history.txt'.\n");
+
+    // Tutup file
+    fclose(file);
+}
 
 
