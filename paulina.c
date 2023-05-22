@@ -19,9 +19,6 @@ void pilihan(){
 	printf("\t\t\t\t\t                                    ----------------                                      \n");
 	printf("\t\t\t\t\t                                   (3) Mutlak                                             \n");
 	printf("\t\t\t\t\t                                    ----------------                                      \n");
-	printf("\t\t\t\t\t                                    ----------------                                      \n");
-	printf("\t\t\t\t\t                                   (4) Logaritma 10                                       \n");
-	printf("\t\t\t\t\t                                    ----------------                                      \n");
 	printf("\t\t\t\t\t ==================================================================================       \n");
 	printf("\t\t\t\t\t                                       PILIHAN : ");
 	scanf("%d", &menu);
@@ -38,9 +35,6 @@ void pilihan(){
 		case 3:
 			mutlak();
 			break;
-//		case 4:
-//			logBiasa();
-//			break;
 		default:
 			printf("\t\t\t\t\t Mohon maaf pilihan anda salah! ");
 			getche();
@@ -48,6 +42,10 @@ void pilihan(){
 
 }
 
+/*  is : terdapat 2 buah angka, satu sebagai basis dan satu sebagai pangkat
+	fs : hasil perhitungan pangkat
+	referensi : http://cahyasmara.blogspot.com/2017/04/program-perhitungan-perpangkatan-dengan.html
+*/
 int pangkat(int x, int y)
 {
 	int p;
@@ -72,6 +70,10 @@ void perpangkatan()
     printf("Hasilnya adalah  : %d", hasil);
 }
 
+/*  is : terdapat 2 buang angka, satu sebagai basis dan satu sebagai akar
+	fs : hasil perhitungan akar
+	referensi : Teman (Ridha)	
+*/
 double akarsemua(double x, double n) 
 {
     double hasil = 1.0;
@@ -105,6 +107,10 @@ void akar()
     printf("%.2lf akar %.2lf adalah: %.5lf\n", base, n, hasil);
 }
 
+/*  is : terdapat 1 buah angka
+	fs : hasil perhitungan nilai mutlak
+	referensi : kalkulator
+*/
 int nilaimutlak(int angka) 
 {
    if (angka < 0) {
@@ -114,7 +120,8 @@ int nilaimutlak(int angka)
       return angka;
    }
 }
-   
+
+
 void mutlak()
 {
 	int angka;
@@ -123,33 +130,29 @@ void mutlak()
 	printf("Nilai mutlak dari %d adalah %d", angka, nilaimutlak(angka));
 }
 
-//#include "paulina.h"
-//
-//int main(){
-////	char operasi[10];
-////	float angka, n;
-//	int nilai, angka;
-//	double x;
-//	int p, y, hasil;
-//	
-//	printf("Masukkan angka: ");
-//    scanf("%d", &p);
-//    printf("Masukkan pangkat: ");
-//    scanf("%d", &y);
-//    hasil = pangkat(p, y);
-//	printf("%d pangkat %d adalah %d\n", p, y, hasil);
-//    return 0;
-//    
-////	printf("Masukkan angka: ");
-////    scanf("%lf", &x);
-////	printf("Akar dari %.2f adalah %.6f\n", x, akar2(x));
-////     return 0;
-//   
-//   printf("Masukkan angka: ");
-//   scanf("%d", &angka);
-//   nilai = mutlak(angka);
-//   printf("Nilai mutlak dari %d adalah %d", angka, mutlak(angka));
-//
-//   return 0;
-//}
+/*  is :
+	fs :
+	referensi : Tugas besar pribadi DDP semester 1,
+				https://stackoverflow.com/questions/34008206/how-to-create-a-new-text-file-in-c
+*/
+void history() {
+    FILE *file;
+    int result;
+
+    // Buka file untuk ditulis (file akan dibuat jika belum ada)
+    file = fopen("history.txt", "w");
+
+    if (file == NULL) {
+        printf("Gagal membuka file.");
+        return 1;
+    }
+    // Tulis riwayat operasi ke file
+    fprintf(file, "Hasil: %d\n", result);
+
+    printf("Hasil: %d\n", result);
+    printf("Riwayat operasi telah disimpan dalam file 'history.txt'.\n");
+
+    fclose(file);
+}
+
 

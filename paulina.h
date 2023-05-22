@@ -10,27 +10,7 @@ void pilihan();
 void perpangkatan();
 void akar();
 void mutlak();
+void history();
 
 #endif
-
-void history() {
-    FILE *file;
-    int result;
-
-    // Buka file untuk ditulis (file akan dibuat jika belum ada)
-    file = fopen("history.txt", "w");
-
-    if (file == NULL) {
-        printf("Gagal membuka file.");
-        return 1;
-    }
-    // Tulis riwayat operasi ke file
-    fprintf(file, "Hasil: %d\n", result);
-
-    printf("Hasil: %d\n", result);
-    printf("Riwayat operasi telah disimpan dalam file 'history.txt'.\n");
-
-    fclose(file);
-}
-
 
