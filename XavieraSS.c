@@ -7,7 +7,7 @@ float AkarKuadrat(float x) {
     float hasil = x; 
     float epsilon = 0.000001; //menetapkan toleransi kesalahan epsilon
     while ((hasil - x / hasil) > epsilon) { //loop
-        hasil = (hasil + x / hasil) / 2.0; // Pendekatan digunakan untuk mendekati akar kuadrat nilai x
+//        hasil = (hasil + x / hasil) / 2.0; // Pendekatan digunakan untuk mendekati akar kuadrat nilai x
     }
     return hasil; //mengembalikan nilai hasil
 }
@@ -135,35 +135,37 @@ double arcsec (double x){
 3. Photomath
 */
 
-int main() {
-    char input[50], operator[10], nilai[10];
-    double x;
-    printf("Masukkan operasi invers trigonometri: ");
-    fgets(input, 50, stdin); 
-    sscanf(input, "%[^()] (%[^)])", operator, nilai); //pemisahan dari input
-    x = atof(nilai); //mengubah x agar bertipe double
-    double hasil;
-    if (strcmp(operator, "arcsin") == 0) {
-        hasil = arcsin(x);
-        printf("arcsin(%2.lf) = %lf\n", x, hasil);
-    } else if (strcmp(operator, "arctan") == 0) {
-        hasil = arctan(x);
-		printf("arctan(%2.lf) = %lf\n", x, hasil); 
-    } else if (strcmp(operator, "arccos") == 0) {
-        hasil = arccos(x);
-        printf("arccos(%2.lf) = %lf\n", x, hasil);  
-    } else if (strcmp(operator, "arccot") == 0) {
-        hasil = arccot(x);
-        printf("arccot(%2.lf) = %lf\n", x, hasil);
-    } else if (strcmp(operator, "arccsc") == 0) {
-        hasil = arccsc(x);
-        printf("arccsc(%2.lf) = %lf\n", x, hasil); 
-    } else if (strcmp(operator, "arcsec") == 0) {
-        hasil = arcsec(x);
-        printf("arcsec(%2.lf) = %lf\n", x, hasil); 
-	} else {
-		printf ("Operasi tidak valid\n");	
-	}
-	return 0;
-}
+
+
+//int main() {
+//    char input[50], operator[10], nilai[10];
+//    double x;
+//    printf("Masukkan operasi invers trigonometri: ");
+//    fgets(input, 50, stdin); 
+//    sscanf(input, "%[^()] (%[^)])", operator, nilai); //pemisahan dari input
+//    x = atof(nilai); //mengubah x agar bertipe double
+//    double hasil;
+//    if (strcmp(operator, "arcsin") == 0) {
+//        hasil = arcsin(x);
+//        printf("arcsin(%2.lf) = %lf\n", x, hasil);
+//    } else if (strcmp(operator, "arctan") == 0) {
+//        hasil = arctan(x);
+//		printf("arctan(%2.lf) = %lf\n", x, hasil); 
+//    } else if (strcmp(operator, "arccos") == 0) {
+//        hasil = arccos(x);
+//        printf("arccos(%2.lf) = %lf\n", x, hasil);  
+//    } else if (strcmp(operator, "arccot") == 0) {
+//        hasil = arccot(x);
+//        printf("arccot(%2.lf) = %lf\n", x, hasil);
+//    } else if (strcmp(operator, "arccsc") == 0) {
+//        hasil = arccsc(x);
+//        printf("arccsc(%2.lf) = %lf\n", x, hasil); 
+//    } else if (strcmp(operator, "arcsec") == 0) {
+//        hasil = arcsec(x);
+//        printf("arcsec(%2.lf) = %lf\n", x, hasil); 
+//	} else {
+//		printf ("Operasi tidak valid\n");	
+//	}
+//	return 0;
+//}
 

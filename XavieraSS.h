@@ -1,4 +1,5 @@
-
+#ifndef XavieraSS_h
+#define XavieraSS_h
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -14,4 +15,4 @@ double arccos(double x);
 double arccot(double x);
 double arccsc (double x);
 double arcsec (double x);
-
+#endif

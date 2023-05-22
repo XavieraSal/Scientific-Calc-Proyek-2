@@ -1,4 +1,5 @@
 #ifndef gian_h
+#define gian_h
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
