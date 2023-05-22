@@ -1,7 +1,6 @@
 #ifndef gian_h
 #include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
 #include <string.h>
 #define phi 3.14159265
 double result, x; 
