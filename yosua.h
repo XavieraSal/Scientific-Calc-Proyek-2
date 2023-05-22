@@ -1,5 +1,6 @@
 /*header */
 #ifndef yosua_h
+#define yosua_h
 #include <stdio.h>
 #include <conio.h>
 
@@ -12,31 +13,9 @@ double perkalian(double  x, double  y);
 double  pembagian(double  x, double y);
 int modulus(int x, int y);
 
-//menggantikan 	 void dengan double untuk fungsi penjumlahan
-double penjumlahan(double x, double y){
-	return x+y;
-}
-//
-double pengurangan(double x, double y){
-	return x-y;
-}
 
-double perkalian(double x, double y){
-	return x*y;
-}
 
-double pembagian(double x, double y){
-	return x/y;
-}
 
-int modulus(int x,int y){
-	return  x%y;
-}
-
-double persent (double desimal)
-{
-	return desimal/100;
-}
 #endif
 
 

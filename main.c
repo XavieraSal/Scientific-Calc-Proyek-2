@@ -1,481 +1,645 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
 #include <stdlib.h>
-#include <math.h>
+#include "yosua.h"
 #include "paulina.h"
 #include "AuliaAziizah.h"
 #include "XavieraSS.h"
 #include "gian.h"
-#include "yosua.h"
 #include "brahmantya.h"
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-int main() {
-	
-	int pilih1, pilih2;
-	matematika arr[100];
+
+void inorder_traversal(address node) {
+    if (node != NULL) {
+        inorder_traversal(node->left);
+        printf("%s ", node->info);
+        inorder_traversal(node->right);
+    }
+}
+
+int main(){
+	char input[255];
+	char input2[355];
+	char* input3[255];
+	address tree;
+	int i,j;
 	char *p;
-	char input[300];
-	int cek_o,cek_a, op=0;
-	int i,j,c,d,a,b,pilih,l,panjang;
-	double hasil;
-	int arrlen = sizeof arr / sizeof arr[0];
-	memset(arr, 0, sizeof(arr));
-	double n, result; 
-	
-	double koef, ekspo, result1, result2;
-	char var = 't';
-	char re='y';
-	char satuan[10];
-    float nilai;
-	
-	int pilihm;
-	
-	while(re=='y'){ 
-		
-//		tampil_kel();
-
+	int cek_o,cek_a, op=0,cekmutlak=0,kurung=0,mutlak=0,buka=0,tutup=0;
+	char ulang='y';
+	bool cek_input=true;
+	while(ulang=='y'||ulang=='Y'){
+		cek_input=true;
 		system("cls");
-		puts("\t\t\t\t\t\t\t================================================================================================");
-		puts("\t\t\t\t\t\t	 _____                      _      ___    _  __    _                             _      _  _   ");
-		puts("\t\t\t\t\t\t	|  __ \\                    | |    |__ \\  | |/ /   | |                           | |    | || |  ");
-		puts("\t\t\t\t\t\t 	| |__) | __ ___  _   _  ___| | __    ) | | ' / ___| | ___  _ __ ___  _ __   ___ | | __ | || |_ ");
-		puts("\t\t\t\t\t\t	|  ___/ '__/ _ \\| | | |/ _ \\ |/ /   / /  |  < / _ \\ |/ _ \\| '_ ` _ \\| '_ \\ / _ \\| |/ / |__   _|");
-		puts("\t\t\t\t\t\t	| |   | | | (_) | |_| |  __/   <   / /_  | . \\  __/ | (_) | | | | | | |_) | (_) |   <     | |  ");
-		puts("\t\t\t\t\t\t	|_|   |_|  \\___/ \\__, |\\___|_|\\_\\ |____| |_|\\_\\___|_|\\___/|_| |_| |_| .__/ \\___/|_|\\_\\    |_|  ");
-		puts("\t\t\t\t\t\t            	          __/ |                                             | |                      ");  
-		puts("\t\t\t\t\t\t     	                 |___/                                              |_|                        ");
-		puts("\t\t\t\t\t\t\t================================================================================================");
-		printf("\n\n");
-
-		int tampilan_awal,pilih1,pilih2;
-		printf("\t\t\t\t\t\t\t     _____________________________________________________________________________________   \n");
-		printf("\t\t\t\t\t\t\t    |   _______________________________________________________________________________   |  \n");
-		printf("\t\t\t\t\t\t\t    |  |                                                                               |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |                                                                            0  |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |_______________________________________________________________________________|  |  \n");
-		printf("\t\t\t\t\t\t\t    |                                                                                     |  \n");
-		printf("\t\t\t\t\t\t\t    |   _______________________________________________________________________________   |  \n");
-		printf("\t\t\t\t\t\t\t    |  |        |        |         |         |         |         |                     |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |  Sin   |  log   |    *    |   phi   |    .    |    =    |          AC         |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |________|________|_________|_________|_________|_________|_____________________|  |  \n");
-		printf("\t\t\t\t\t\t\t    |   _______________________________________________________________________________   |  \n");
-		printf("\t\t\t\t\t\t\t    |  |        |        |         |         |         |         |          |          |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |  Cos   |   +    |    /    |    9    |    8    |    7    |     6    |     5    |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |________|________|_________|_________|_________|_________|__________|__________|  |  \n");
-		printf("\t\t\t\t\t\t\t    |   _______________________________________________________________________________   |  \n");
-		printf("\t\t\t\t\t\t\t    |  |        |        |         |         |         |         |          |          |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |  Tan   |   -    |    ^    |    0    |    1    |    2    |     3    |     4    |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |________|________|_________|_________|_________|_________|__________|__________|  |  \n");
-		printf("\t\t\t\t\t\t\t    |   _____________________________________    ______________________________________   |  \n");
-		printf("\t\t\t\t\t\t\t    |  |                                     |  |                                      |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |           1. ARITMATIKA             |  |          2. FITUR LAINNYA            |  |  \n");
-		printf("\t\t\t\t\t\t\t    |  |_____________________________________|  |______________________________________|  |  \n");
-		printf("\t\t\t\t\t\t\t    |_____________________________________________________________________________________|  \n");
+		memset(input,'\0',sizeof(input));
+		memset(input2,'\0',sizeof(input2));
+		memset(input3,'\0',sizeof(input3));
+		printf("inputkan operasi : ");
+	//	getchar();
+		fgets(input, sizeof(input), stdin); 
+		
+		i=0;
+		while(input[i] != '\0'){
 			
-		printf("\t\t\t\t\t\t\t                                        PILIHAN : ");
-		scanf("%d", &tampilan_awal);
-		switch(tampilan_awal)
-		{
-			case 1: system("cls");
-					printf("\n\nMasukan operasi matematika (Setiap input diikuti dengan spasi)");
-					printf("\nInsert : ");
-					getchar();
-					fgets(input, sizeof(input), stdin);
-						
-						
-					p = strtok(input, " ");
-					
-					i=0;
-					cek_o=0;
-					cek_a=0;
-					while (p != NULL) {
-				        if (isdigit(p[0]) || isdigit(p[1]) && p[0] == '-' || p[0] == '.'){
-				        	
-				            arr[i].angka = atof(p);
-				            cek_a++;
-				            
-				        }
-						
-						else if (strcmp(p, "pi") == 0) {
-							    arr[i].angka = 3.14;
-							    cek_a++;
-							    
-							}  
-				        
-						else if(!isdigit(p[0])){
-						
-							if (p[0]=='+') {
-					            arr[i].operasi = p[0];
-					            cek_o++;
-					            op++;
-				            
-					        } 
-					        
-					        else if (!isdigit(p[1]) && p[0]=='-' ) {
-					            arr[i].operasi = p[0];
-					            cek_o++;
-					            op++;
-					            
-					        } 
-					        
-					        else if (p[0]=='*') {
-					            arr[i].operasi = p[0];
-					            cek_o++;
-					            op++;
-					            
-					        } 
-					        
-					        else if (p[0]=='/') {
-					            arr[i].operasi = p[0];
-					            cek_o++;
-					            op++;
-					            
-					        } 
-					        else if (p[0] == '^') {
-							    arr[i].operasi = p[0];
-							    cek_o++;
-							    op++;
-							    
-							} 
-							else if (p[0] == 'v') {
-							    arr[i].operasi = p[0];
-							    cek_o++;
-							    op++;
-							    
-							} 
-							else if (strcmp(p, "sin") == 0 || strcmp(p, "Sin") == 0 || strcmp(p, "SIN") == 0) {
-							    arr[i].operasi = 'S';
-							    cek_o++;
-							    op++;
-							    
-							} 
-							else if (strcmp(p, "cos") == 0 || strcmp(p, "Cos") == 0 || strcmp(p, "COS") == 0) {
-							    arr[i].operasi = 'C';
-							    cek_o++;
-							    op++;
-							    
-							} 
-							else if (strcmp(p, "tan") == 0 || strcmp(p, "Tan") == 0 || strcmp(p, "TAN") == 0) {
-							    arr[i].operasi = 'T';
-							    cek_o++;
-							    op++;
-							    
-							}
-							else if (strcmp(p, "csc") == 0 || strcmp(p, "Csc") == 0 || strcmp(p, "csc") == 0) {
-							    arr[i].operasi = 's';
-							    cek_o++;
-							    op++;
-							    
-							} 
-							else if (strcmp(p, "sec") == 0 || strcmp(p, "Sec") == 0 || strcmp(p, "SEC") == 0) {
-							    arr[i].operasi = 'c';
-							    cek_o++;
-							    op++;
-							    
-							} 
-							else if (strcmp(p, "cot") == 0 || strcmp(p, "Cot") == 0 || strcmp(p, "COT") == 0) {
-							    arr[i].operasi = 't';
-							    cek_o++;
-							    op++;
-							    
-							}
-							
-							else if (strcmp(p, "log") == 0) {
-							    arr[i].operasi = 'L';
-							    cek_o++;
-							    op++;
-							    
-							} 
-							
-							else if (strcmp(p, "ln") == 0) {
-							    arr[i].operasi = 'l';
-							    cek_o++;
-							    op++;
-							    
-							} 
-							 
-							else if (p[0]== '%') {
-							    arr[i].operasi = p[0];
-							    cek_o++;
-							    op++;
-							    
-							} 
+			if(isupper(input[i])){
 				
-							else if (p[0] == '!') {
-							    arr[i].operasi = p[0];
-							    cek_o++;
-							    op++;
-							    
-							} 
-							
-							else if (p[0] == '(' || p[0] == ')') {
-							    arr[i].operasi = p[0];
-							    cek_o++;
-							    op++;
-							    
-							} 
-							
-							else if (p[0] == '|') {
-							    arr[i].operasi = p[0];
-							    cek_o++;
-							    op++;
-							    
-							} 
-							
-							
-							
-						}
-						
-						else {
-					            printf("Salah input: %s\n", p);
-					            return 1;
-					        }
-						
-						
-				        p = strtok(NULL, " ");
-				        i++;
-				    }
-				    
-				    
-				    panjang=cek_a+cek_o;
-				    i=0;
-					
-				    
-				    
-					hasil=hitung(arr,panjang, op);
-					printf("hasil %.2lf", hasil);
-				break;
-				
-			case 2: system("cls");
-					printf("\t\t\t\t\t\t\t\t   ================================================================       \n");
-					printf("\t\t\t\t\t\t\t\t  |                          Fitur Lainnya                         |      \n");
-					printf("\t\t\t\t\t\t\t\t   ================================================================       \n");
-					printf("\t\t\t\t\t\t\t\t   ================================================================       \n");
-					printf("\t\t\t\t\t\t\t\t  |                      [1]. Matriks                              |      \n");	
-					printf("\t\t\t\t\t\t\t\t   ================================================================       \n");	
-					printf("\t\t\t\t\t\t\t\t  |                      [2]. Konversi                             |      \n");
-					printf("\t\t\t\t\t\t\t\t   ================================================================       \n");
-					printf("\t\t\t\t\t\t\t\t  |                      [3]. Invers                               |      \n");
-					printf("\t\t\t\t\t\t\t\t   ================================================================       \n");
-					printf("\t\t\t\t\t\t\t\t  |                      [4]. Turunan                              |      \n");
-					printf("\t\t\t\t\t\t\t\t   ================================================================       \n");
-					printf("\t\t\t\t\t\t                                                 PILIHAN : ");
-					scanf("%d", &pilih1);
-					switch(pilih1){
-						
-						case 1: 
-								
-								system("cls");
-								printf("Operasi Matriks \n");
-								printf("1. Penjumlahan\n");
-								printf("2. Pengurangan\n");	
-								printf("3. Perkalian\n");
-								printf("4. Perkalian Skalar\n");
-								printf("5. Transpose\n");
-								printf("Pilih : ");
-								scanf("%d", &pilihm);
-								switch(pilihm){
-									case 1:matriksPenjumlahan();
-										break;
-									case 2:matriksPengurangan();
-										break;
-									case 3:matriksPerkalian();
-										break;
-									case 4:matriksPerkalianSkalar();
-										break;
-									case 5:transposeMatriks();
-										break;
-							    getch();
-								}
-								break;
-						
-						case 2: printf("\nKeterangan satuan dari setiap jenis konversi : ");
-								printf("\nKonversi Suhu \t\t: C, F, K ");
-								printf("\nKonversi Luas \t\t: km, hm, dam, m, dm, cm, mm");
-								printf("\nKonversi Waktu \t\t: hari, jam, menit, detik ");
-								printf("\nKonversi Panjang \t: km2, hm2, dam2, m2, dm2, cm2, mm2");
-								printf("\nMasukan nilai dan satuannya : ");
-								scanf("%f %s", &nilai, satuan);
-	
-								if (strcmp(satuan, "C") == 0){
-									sscanf(satuan,"%f C",&nilai);
-							        hasilKonversiCelcius(nilai);
-							    } else if (strcmp(satuan, "F") == 0){
-									sscanf(satuan,"%f F",&nilai);
-							        hasilKonversiFahrenheit(nilai);
-							    } else if (strcmp(satuan, "K") == 0){
-							    	sscanf(satuan,"%f K",&nilai);
-							        hasilKonversiKelvin(nilai);
-								} 
-								else if (strcmp(satuan, "km") == 0){
-									sscanf(satuan,"%f km",&nilai);
-							        hasilKonversiKm(nilai);
-							    } else if(strcmp(satuan, "hm") == 0){
-									sscanf(satuan,"%f hm",&nilai);
-							        hasilKonversiHm(nilai);
-							    } else if(strcmp(satuan, "dam") == 0){
-							    	sscanf(satuan,"%f dam",&nilai);
-							        hasilKonversiDam(nilai);
-								} else if(strcmp(satuan, "m") == 0){
-							    	sscanf(satuan,"%f m",&nilai);
-							        hasilKonversiM(nilai);
-								} else if(strcmp(satuan, "dm") == 0){
-							    	sscanf(satuan,"%f dm",&nilai);
-							        hasilKonversiDm(nilai);
-								} else if(strcmp(satuan, "cm") == 0){
-							    	sscanf(satuan,"%f cm",&nilai);
-							        hasilKonversiCm(nilai);
-							    } else if(strcmp(satuan, "mm") == 0){
-							    	sscanf(satuan,"%f mm",&nilai);
-							        hasilKonversiMm(nilai);
-								}
-								else if(strcmp(satuan, "hari") == 0){
-									sscanf(satuan,"%f hari",&nilai);
-							        hasilKonversiHari(nilai);
-							    } else if(strcmp(satuan, "jam") == 0){
-							    	sscanf(satuan,"%f jam",&nilai);
-							        hasilKonversiJam(nilai);
-								} else if(strcmp(satuan, "menit") == 0){
-									sscanf(satuan,"%f menit",&nilai);
-							        hasilKonversiMenit(nilai);
-							    } else if(strcmp(satuan, "detik") == 0){
-									sscanf(satuan,"%f detik",&nilai);
-							        hasilKonversiDetik(nilai);
-								}
-								if (strcmp(satuan, "km2") == 0){
-									sscanf(satuan,"%f km2",&nilai);
-							        hasilKonversiKm2(nilai);
-							    } else if(strcmp(satuan, "hm2") == 0){
-									sscanf(satuan,"%f hm2",&nilai);
-							        hasilKonversiHm2(nilai);
-							    } else if(strcmp(satuan, "dam2") == 0){
-							    	sscanf(satuan,"%f dam2",&nilai);
-							        hasilKonversiDam2(nilai);
-								} else if(strcmp(satuan, "m2") == 0){
-							    	sscanf(satuan,"%f m2",&nilai);
-							        hasilKonversiM2(nilai);
-								} else if(strcmp(satuan, "dm2") == 0){
-							    	sscanf(satuan,"%f dm2",&nilai);
-							        hasilKonversiDm2(nilai);
-								} else if(strcmp(satuan, "cm2") == 0){
-							    	sscanf(satuan,"%f cm2",&nilai);
-							        hasilKonversiCm2(nilai);
-							    } else if(strcmp(satuan, "mm2") == 0){
-							    	sscanf(satuan,"%f mm2",&nilai);
-							        hasilKonversiMm(nilai);
-								} 
-								else
-									printf("Input salah...");
-								break;
-						
-						case 3: printf("\t\t\t\t\t\t   ================================================================       \n");
-								printf("\t\t\t\t\t\t  |                            INVERS                              |      \n");
-								printf("\t\t\t\t\t\t   ================================================================       \n");
-								printf("\t\t\t\t\t\t   ================================================================       \n");
-								printf("\t\t\t\t\t\t  |                      [1]. Sin                                  |      \n");	
-								printf("\t\t\t\t\t\t   ================================================================       \n");	
-								printf("\t\t\t\t\t\t  |                      [2]. Cos                                  |      \n");
-								printf("\t\t\t\t\t\t   ================================================================       \n");
-								printf("\t\t\t\t\t\t  |                      [3]. Tan                                  |      \n");
-								printf("\t\t\t\t\t\t   ================================================================       \n");
-								printf("\t\t\t\t\t                                                 PILIHAN : ");
-								scanf("%d", &pilih2);
-								
-								switch(pilih2){
-									
-									case 1: printf("\nInvers Sin: ");   
-										    printf("\nMasukkan sebuah angka: ");                
-										    scanf("%lf",&n);
-										    if(n>1 || n<-1)  //tidak di dalam range
-										    {
-										        printf("Tidak di dalam range");
-										    }
-										    else
-										    {
-										        result = InversSinRad (n);
-										        printf("Inverse dari sin(%.2f) = %.2lf dalam radian\n", n, result);
-										
-										
-										        result = InversSinDrjt (n);    
-										        printf("Inverse dari sin(%.2f) = %.2lf dalam derajat\n", n, result);
-										    }
-											break;
-									
-									case 2: printf("\nInvers Cos: "); 
-										    printf("\nMasukkan sebuah angka: ");                
-										    scanf("%lf",&n);
-										    if(n>1 || n<-1)  //tidak di dalam range
-										    {
-										        printf("Tidak di dalam range");
-										    }
-										    else
-										    {
-										        result = InversCosRad(n);
-										        printf("Invers dari cos(%.2f) = %.2lf dalam radian\n", n, result);
-										
-										
-										        result = InversCosDrjt(n);    
-										        printf("Inverse dari sin(%.2f) = %.2lf dalam derajat\n", n, result);
-										    }
-											break;
-											
-									case 3: printf("\nInvers Tan: "); 
-										    printf("\nMasukkan sebuah angka: ");                
-										    scanf("%lf",&n);
-										    
-										    result = InversTanRad(n);
-										    printf("\nInverse of tan(%.2f) = %.2f in radians", n, result);
-										
-										    result = InversTanDrjt (n);
-										    printf("\nInverse of tan(%.2f) = %.2f in degrees", n, result);
-											break;
-											
-									default:
-											printf("\nInput Salah ! ");
-											getche();
-									
-								}
-					
-								
-								
-								break;
-						
-						case 4: printf("\nTurunan");
-								printf("\nMasukkan koefisien atau konstanta: ");
-							    scanf("%lf", &koef);
-							    fflush(stdin);
-							    printf("\nMasukkan variabel (jika tidak ada, input 't'): ");
-							    scanf("%s", &var);
-							    if (var=='t' || koef==0){
-							    	printf("\nturunan dari %.1lf adalah 0", koef);
-								}
-								else{
-								    printf("\nMasukkan pangkat dari variabel: ");
-								    scanf(" %lf", &ekspo);
-									result1 = koefTurunan (ekspo, koef);
-								    result2 = ekspoTurunan(ekspo);
-								    printf("\nturunan dari %.1lf%c^%.1lf adalah %.1lf%c^%.1lf", koef, var, ekspo, result1, var, result2);
-								}
-								break;
-						
-						default:
-							printf("\nInput Salah ! ");
-							getche();
-						
-						
-					}
-					
-					
-				break;
-			default:
-				printf("\nInput Salah ! ");
-				getche();
+				input[i]=tolower(input[i]);
+			}
+			i++;
+			
 		}
 		
-		printf("\nApakah ingin mengulang? (y/n) ");
-		re=getch();
 	
+		i=0;
+		j=0;
+		while (input[i] != '\0') {
+		    if (isspace(input[i])) { 
+		      i++;
+		      continue;
+		    }
+		
+		    
+		    if (isdigit(input[i]) || input[i] == '.') {
+		      input2[j] = input[i];
+		      j++;
+		    } 
+			
+			else if (input[i] == 'a' && input[i+1] == 'r' && input[i+2] == 'c' && input[i+3] == 's' && input[i+4] == 'i' && input[i+5] == 'n') {
+		      
+		      input2[j] = 'a';
+		      j++;
+		      input2[j] = 'r';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+		      input2[j] = 's';
+		      j++;
+		      input2[j] = 'i';
+		      j++;
+		      input2[j] = 'n';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 5;
+		    } else if (input[i] == 'a' && input[i+1] == 'r' && input[i+2] == 'c' && input[i+3] == 'c' && input[i+4] == 'o' && input[i+5] == 's') {
+		      
+		      input2[j] = 'a';
+		      j++;
+		      input2[j] = 'r';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+			  input2[j] = 'c';
+		      j++;
+		      input2[j] = 'o';
+		      j++;
+		      input2[j] = 's';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 5;
+		    } else if (input[i] == 'a' && input[i+1] == 'r' && input[i+2] == 'c' && input[i+3] == 't' && input[i+4] == 'a' && input[i+5] == 'n') {
+		      
+		      input2[j] = 'a';
+		      j++;
+		      input2[j] = 'r';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+			  input2[j] = 't';
+		      j++;
+		      input2[j] = 'a';
+		      j++;
+		      input2[j] = 'n';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 5;
+		    }
+		    
+		    else if (input[i] == 'a' && input[i+1] == 'r' && input[i+2] == 'c' && input[i+3] == 's' && input[i+4] == 'e' && input[i+5] == 'c') {
+		      
+		      input2[j] = 'a';
+		      j++;
+		      input2[j] = 'r';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+		      input2[j] = 's';
+		      j++;
+		      input2[j] = 'e';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 5;
+		    } else if (input[i] == 'a' && input[i+1] == 'r' && input[i+2] == 'c' && input[i+3] == 'c' && input[i+4] == 's' && input[i+5] == 'c') {
+		      
+		      input2[j] = 'a';
+		      j++;
+		      input2[j] = 'r';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+			  input2[j] = 'c';
+		      j++;
+		      input2[j] = 's';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 5;
+		    } else if (input[i] == 'a' && input[i+1] == 'r' && input[i+2] == 'c' && input[i+3] == 'c' && input[i+4] == 'o' && input[i+5] == 't') {
+		      
+		      input2[j] = 'a';
+		      j++;
+		      input2[j] = 'r';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+			  input2[j] = 'c';
+		      j++;
+		      input2[j] = 'o';
+		      j++;
+		      input2[j] = 't';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 5;
+		    }
+			
+			else if (input[i-1]!='c' && input[i] == 's' && input[i+1] == 'i' && input[i+2] == 'n') {
+		      
+		      input2[j] = 's';
+		      j++;
+		      input2[j] = 'i';
+		      j++;
+		      input2[j] = 'n';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 2;
+		    } else if (input[i-1]!='c' && input[i] == 'c' && input[i+1] == 'o' && input[i+2] == 's') {
+		      
+		      input2[j] = 'c';
+		      j++;
+		      input2[j] = 'o';
+		      j++;
+		      input2[j] = 's';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 2;
+		    } else if (input[i-1]!='c' && input[i] == 't' && input[i+1] == 'a' && input[i+2] == 'n') {
+		      
+		      input2[j] = 't';
+		      j++;
+		      input2[j] = 'a';
+		      j++;
+		      input2[j] = 'n';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 2;
+		    } else if (input[i-1] !='c' && input[i] == 'c' && input[i+1] == 's' && input[i+2] == 'c') {
+		      
+		      input2[j] = 'c';
+		      j++;
+		      input2[j] = 's';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 2;
+		    } else if (input[i-1]!='c' &&input[i] == 's' && input[i+1] == 'e' && input[i+2] == 'c') {
+		      
+		      input2[j] = 's';
+		      j++;
+		      input2[j] = 'e';
+		      j++;
+		      input2[j] = 'c';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 2;
+		    } else if (input[i-1]!='c' && input[i] == 'c' && input[i+1] == 'o' && input[i+2] == 't') {
+		      
+		      input2[j] = 'c';
+		      j++;
+		      input2[j] = 'o';
+		      j++;
+		      input2[j] = 't';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 2;
+		    } else if (input[i] == 'l' && input[i+1] == 'o' && input[i+2] == 'g') {
+		     
+		      input2[j] = 'l';
+		      j++;
+		      input2[j] = 'o';
+		      j++;
+		      input2[j] = 'g';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 2;
+		    } else if (input[i] == 'l' && input[i+1] == 'n') {
+		      
+		      input2[j] = 'l';
+		      j++;
+		      input2[j] = 'n';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i++;
+		    } else if (input[i] == 'p' && input[i+1] == 'i') {
+		      
+		      input2[j] = 'p';
+		      j++;
+		      input2[j] = 'i';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i++;
+		    } else if (input[i] == '-' && isspace(input2[j-1]) && !isdigit(input2[j-2])&&input2[j-2]!='!'&&input2[j-2]!='%'&&input2[j-2]!='i'&&input2[j-2]!=')'&&input2[j-2]!='('){
+		      
+		      input2[j] = input[i];
+		      j++;
+		    
+		    }else if (input[i] == '-' && !isdigit(input2[j-1])&&input2[j-2]!='!'&&input2[j-2]!='%'&&input2[j-2]!='i'){
+		      
+		      input2[j] = input[i];
+		      j++; 
+		    
+		    } else if (input[i] == 'm' && input[i+1] == 'o' && input[i+2] == 'd') {
+		      
+		      input2[j] = ' ';
+		      j++;
+		      input2[j] = 'm';
+		      j++;
+		      input2[j] = 'o';
+		      j++;
+		      input2[j] = 'd';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 2;
+		    }
+		     
+		    else if (input[i] == 'e' && input[i+1] == 'x' && input[i+2] == 'p') {
+		     
+		      input2[j] = ' ';
+		      j++;
+		      input2[j] = 'e';
+		      j++;
+		      input2[j] = 'x';
+		      j++;
+		      input2[j] = 'p';
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		      i += 2;
+		    }
+		    
+			else {
+		      
+		      input2[j] = ' ';
+		      j++;
+		      input2[j] = input[i];
+		      j++;
+		      input2[j] = ' ';
+		      j++;
+		    }
+	
+	    	i++;
+	  	}
+	  
+	  
+	  	input2[j] = '\0';
+	  	i=0;
+	  	printf("\ninput2: ");
+	  	while(input2[i]!='\0'){
+	  		
+			printf("%c",input2[i]);
+			i++;
+			  		
+		}
+	  	
+	  	p = strtok(input2, " ");
+		
+		i=0;
+		cek_o=0;
+		cek_a=0;
+		op=0;
+		cekmutlak=0;
+		kurung=0;
+		mutlak=0;
+		buka=0;
+		tutup=0;
+		while (p != NULL) {
+	        if (isdigit(p[0]) || isdigit(p[1]) && p[0] == '-' || p[0] == '.'){
+	        	
+	            input3[i]=p;
+	            cek_a++;
+	        }
+			
+			else if (strcmp(p, "pi") == 0) {
+				    input3[i]="3.14159265358979323846";
+				    cek_a++;
+				    
+				} 
+				
+			else if (p[0]=='e') {
+				    input3[i]="2.71828182846";
+				    cek_a++;
+				    
+				} 
+	        
+			else if(!isdigit(p[0])){
+			
+				if (p[0]=='+') {
+					
+		            input3[i]="+";
+		            cek_o++;
+		            op++;
+	            
+		        } 
+		        
+		        else if (!isdigit(p[1]) && p[0]=='-' ) {
+		            input3[i]="-";
+		            cek_o++;
+		            op++;
+		            
+		        } 
+		        
+		        else if (p[0]=='*') {
+		            input3[i]="*";
+		            cek_o++;
+		            op++;
+		            
+		        } 
+		        
+		        else if (p[0]=='/') {
+		            input3[i]="/";
+		            cek_o++;
+		            op++;
+		            
+		        } 
+		        else if (p[0] == '^') {
+				    input3[i]="^";
+				    cek_o++;
+				    op++;
+				    
+				} 
+				else if (p[0] == 'v') {
+				    input3[i]="v";
+				    cek_o++;
+				    op++;
+				    
+				}
+				else if (strcmp(p, "exp") == 0) {
+		            input3[i]="E";
+		            cek_o++;
+		            op++;
+		            
+		        }  
+				else if (strcmp(p, "sin") == 0 ) {
+				    input3[i]="S";
+				    cek_o++;
+				    op++;
+				    
+				} 
+				else if (strcmp(p, "cos") == 0 ) {
+				    input3[i]="C";
+				    cek_o++;
+				    op++;
+				    
+				} 
+				else if (strcmp(p, "tan") == 0 ) {
+				    input3[i]="T";
+				    cek_o++;
+				    op++;
+				    
+				}
+				else if (strcmp(p, "csc") == 0 ) {
+				    input3[i]="s";
+				    cek_o++;
+				    op++;
+				    
+				} 
+				else if (strcmp(p, "sec") == 0 ) {
+				    input3[i]="c";
+				    cek_o++;
+				    op++;
+				    
+				} 
+				else if (strcmp(p, "cot") == 0 ) {
+				    input3[i]="t";
+				    cek_o++;
+				    op++;
+				    
+			 	}
+				
+				else if (strcmp(p, "log") == 0) {
+				    input3[i]="L";
+				    cek_o++;
+				    op++;
+				    
+				}
+				
+				else if (strcmp(p, "mod") == 0) {
+				    input3[i]="m";
+				    cek_o++;
+				    op++;
+				    
+				} 
+				
+				else if (strcmp(p, "ln") == 0) {
+				    input3[i]="l";
+				    cek_o++;
+				    op++;
+				    
+				}
+				
+				else if (strcmp(p, "arcsin") == 0) {
+				    input3[i]="aS";
+				    cek_o++;
+				    op++;
+				    
+				}
+				
+				else if (strcmp(p, "arccos") == 0) {
+				    input3[i]="aC";
+				    cek_o++;
+				    op++;
+				    
+				} 
+				
+				else if (strcmp(p, "arctan") == 0) {
+				    input3[i]="aT";
+				    cek_o++;
+				    op++;
+				    
+				}
+				
+				else if (strcmp(p, "arccsc") == 0) {
+				    input3[i]="as";
+				    cek_o++;
+				    op++;
+				    
+				}
+				
+				else if (strcmp(p, "arcsec") == 0) {
+				    input3[i]="ac";
+				    cek_o++;
+				    op++;
+				    
+				} 
+				
+				else if (strcmp(p, "arccot") == 0) {
+				    input3[i]="at";
+				    cek_o++;
+				    op++;
+				    
+				}  
+				 
+				else if (p[0]== '%') {
+				    input3[i]="%";
+				    cek_o++;
+				    op++;
+				    
+				} 
+	
+				else if (p[0] == '!') {
+				    input3[i]="!";
+				    cek_o++;
+				    op++;
+				    
+				} 
+				
+				else if (p[0] == '(') {
+				    input3[i]="(";
+				    cek_o++;
+				    op++;
+				    buka++;
+				    kurung++;
+				    
+				} 
+				
+				else if (p[0] == ')') {
+				    input3[i]=")";
+				    cek_o++;
+				    op++;
+				    tutup++;
+				    kurung++;
+				    
+				} 
+				
+				else if (p[0] == '|') {
+					cekmutlak++;
+					if(cekmutlak%2==0){
+						
+						input3[i]="]";
+						mutlak++;
+					}
+					
+					else{
+						input3[i]="|";
+						
+					}
+				    
+				    cek_o++;
+				    op++;
+				    
+				}
+				else {
+		            printf("Salah input: %s\n", p);
+		            cek_input=false;
+		        } 
+				
+				
+				
+			}
+			
+			else {
+		            printf("Salah input: %s\n", p);
+		            return 1;
+		        }
+			
+			
+	        p = strtok(NULL, " ");
+	        i++;
+	    }
+	    
+	    if(buka!=tutup){
+	    	printf("\nkurung tidak sesuai");
+	    	cek_input=false;
+		}
+	    
+    	i=0;
+	    while (input3[i]!=NULL){
+	    	
+	    	if (strcmp(input3[i], "S") == 0 || strcmp(input3[i], "C") == 0 || strcmp(input3[i], "T") == 0 || strcmp(input3[i], "s") == 0 || strcmp(input3[i], "c") == 0 || strcmp(input3[i], "t") == 0 || strcmp(input3[i], "l") == 0) {
+				if (strcmp(input3[i+3], ")") != 0){
+	    			printf("\n input salah\n");
+	    			cek_input=false;
+				}
+			}
+			else if (strcmp(input3[i], "L") == 0){
+				if (strcmp(input3[i+4], ")") != 0){
+	    			printf("\n input salah\n");
+	    			cek_input=false;
+	    		}
+	    	}
+			i++;	
+		}
+	    
+	  	if(cek_input==true){
+			
+		
+			
+		  	printf("\ntes\n");
+		  	i=0;
+		  	while(i<cek_o+cek_a){
+		  		
+				printf("%s",input3[i]);
+				i++;
+				  		
+			}
+			
+		  	printf("\npanjang : %d\n",cek_o+cek_a);
+			in_to_post(input3,cek_o+cek_a);
+		
+			printf("\npostfix : ");
+			i=0;
+			while(queue[i]) {
+			    printf("%s ", queue[i]);
+			    i++;
+			}
+			
+			tree=post_to_tree(cek_o+cek_a-kurung-mutlak);
+			printf("\ninorder traversal : ");
+			inorder_traversal(tree);
+			
+			double result = calculate(tree);
+			printf("\nHasil perhitungan: %g", result);
+		
+			history(input3,result,cek_o+cek_a);
+		
+		}
+		
+		printf("\n\nApakah ingin mengulang ? (y/t) ");
+		ulang=getch();
+		
+		
 	}
-	
 	return 0;
 }
+
+
+
+

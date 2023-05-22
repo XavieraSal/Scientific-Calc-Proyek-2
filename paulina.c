@@ -2,9 +2,37 @@
 #include <stdlib.h>
 #include "paulina.h"
 
-int main (void){
-	pilihan();
+//int main (void){
+//	pilihan();
+//}
+
+void history(char* input[],double result, int panjang) {
+    FILE *file;
+    //int result;
+	int i;
+    // Buka file untuk ditulis (file akan dibuat jika belum ada)
+    file = fopen("history.txt", "a");
+
+    if (file == NULL) {
+        printf("Gagal membuka file.");
+        //return 1;
+    }
+    // Tulis riwayat operasi ke file
+    i=0;
+  	while(i<panjang){
+  		
+		fprintf(file,"%s",input[i]);
+		i++;
+		  		
+	}
+    fprintf(file, " Hasil: %g\n", result);
+	
+    //printf("Hasil: %d\n", result);
+    printf("\nRiwayat operasi telah disimpan dalam file 'history.txt'.\n");
+	
+    fclose(file);
 }
+
 
 void pilihan(){
 	int menu;
@@ -47,6 +75,11 @@ void pilihan(){
 	}	
 
 }
+
+/*  is : terdapat 2 buah angka, satu sebagai basis dan satu sebagai pangkat
+	fs : hasil perhitungan pangkat
+	referensi : http://cahyasmara.blogspot.com/2017/04/program-perhitungan-perpangkatan-dengan.html
+*/
 
 int pangkat(int x, int y)
 {

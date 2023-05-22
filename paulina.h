@@ -1,4 +1,5 @@
 #ifndef paulina_h
+#define paulina_h
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,56 +11,27 @@ void pilihan();
 void perpangkatan();
 void akar();
 void mutlak();
-
+void history(char* input[],double result, int panjang);
 #endif
 
-//#ifndef paulina_h
-//#include <stdio.h>
-//#include <stdlib.h>
+//void history() {
+//    FILE *file;
+//    int result;
 //
-//int pangkat(int x, int y)
-//{
-//	int p;
-//	int hasil=1;
-//	for(p=1;p<=y;p++){  //y pangkat
-//		hasil=hasil*x;				
+//    // Buka file untuk ditulis (file akan dibuat jika belum ada)
+//    file = fopen("history.txt", "w");
+//
+//    if (file == NULL) {
+//        printf("Gagal membuka file.");
+//        return 1;
 //    }
-//    return hasil;
+//    // Tulis riwayat operasi ke file
+//    fprintf(file, "Hasil: %d\n", result);
+//
+//    printf("Hasil: %d\n", result);
+//    printf("Riwayat operasi telah disimpan dalam file 'history.txt'.\n");
+//
+//    fclose(file);
 //}
-//
-//double akar2 (double x) {
-//    double epsilon, hasil = x;
-//
-//    while ((hasil - x / hasil) > epsilon) {
-//        hasil = (hasil + x / hasil) / 2;
-//    }
-//
-//    return hasil;
-//}
-//
-//int mutlak(int angka) {
-//   if (angka < 0) {
-//      return -angka;
-//   }
-//   else {
-//      return angka;
-//   }
-//}
-//
-//
-////float logBasis10(float n)
-////{
-////	return log10(n);
-////}
-//
-////float logBiasa(float n)
-////{
-////	float hasil;
-////	
-////    hasil = logBasis10 (n);
-////    return hasil;
-////}
-//
-//#endif
 
 
