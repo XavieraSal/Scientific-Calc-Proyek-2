@@ -74,42 +74,42 @@ double faktorial(double n) {  //Fungsi ini untuk menghitung faktorial
 	return result;  //Mengembalikan nilai result
 }
 
-//int main() {
-//	double x;  //Mendeklarasikan variabel x dengan tipe data double
-//	char operasi[10], tanda_kurung[2], sampai_kurung[100];  //Mendeklarasikan tiga array karakter:
-//	printf("Masukkan operasi trigonometri (sin(), cos(), tan(), cot(), csc(), secan(), !(): ");  //Menampilkan pesan kepada pengguna bagaimana cara menginput
-//	scanf("%[^(](%[^)])", operasi, sampai_kurung);  //Membaca input dari pengguna 
-//	if (strcmp(operasi,"sin") == 0) {  		//Memeriksa apakah string operasi sama dengan "sin"
-//		sscanf(sampai_kurung, "%lf", &x);   //Membaca nilai angka dari string sampai_kurung 
-//		printf("sin(%.2lf) = %.6lf\n", x, sin(x));  //Menampilkan hasil perhitungan sinus dari x 
-//	} 
-//	else if (strcmp(operasi, "cos") == 0) { //Memeriksa apakah string operasi sama dengan "cos"
-//		sscanf(sampai_kurung, "%lf", &x);
-//		printf("cos(%.2lf) =  %.6lf\n", x, cos(x));  //Menampilkan hasil perhitungan cos dari x
-//	}
-//	else if (strcmp(operasi,"tan") == 0) { //Memeriksa apakah string operasi sama dengan "tan"
-//		sscanf(sampai_kurung, "%lf", &x);
-//		printf("tan(%.2lf) = %.6lf\n", x, tan(x)); //Menampilkan hasil perhitungan tan dari x
-//	} 
-//	else if (strcmp(operasi, "cot") == 0) { //Memeriksa apakah string operasi sama dengan "cot"
-//		sscanf(sampai_kurung, "%lf", &x);
-//		printf("cot(%.2lf) = %.6lf\n", x, cot(x));  //Menampilkan hasil perhitungan cotan dari x
-//	} 
-//	else if (strcmp(operasi, "csc") == 0) { //Memeriksa apakah string operasi sama dengan "cosec"
-//		sscanf(sampai_kurung, "%lf", &x);
-//		printf("cosec(%.2lf) = %.6lf\n", x, csc(x)); //Menampilkan hasil perhitungan cosec dari x
-//	} 
-//	else if (strcmp(operasi,"secan" ) == 0) { //Memeriksa apakah string operasi sama dengan "secan"
-//		sscanf(sampai_kurung, "%lf", &x);
-//		printf("secan(%.2lf) = %.6lf\n", x, sec(x)); //Menampilkan hasil perhitungan secan dari x
-//	} 
-//	else if (strcmp(operasi, "!") == 0) { //Memeriksa apakah string operasi sama dengan faktorial "!"
-//		sscanf(sampai_kurung, "%lf", &x);
-//		double result = faktorial(x);
-//		printf("%.2lf! = %.4lf\n", x, result); //Menampilkan hasil perhitungan dari faktorial x
-//	} 
-//	else {
-//		printf("Operasi yang dimasukkan tidak valid.\n");
-//	}
-//	return 0;
-//}
+int main() {
+	double x;  //Mendeklarasikan variabel x dengan tipe data double
+	char operasi[10], tanda_kurung[2], sampai_kurung[100];  //Mendeklarasikan tiga array karakter:
+	printf("Masukkan operasi trigonometri (sin(), cos(), tan(), cot(), csc(), secan(), !(): ");  //Menampilkan pesan kepada pengguna bagaimana cara menginput
+	scanf("%[^(](%[^)])", operasi, sampai_kurung);  //Membaca input dari pengguna 
+	if (strcmp(operasi,"sin") == 0) {  		//Memeriksa apakah string operasi sama dengan "sin"
+		sscanf(sampai_kurung, "%lf", &x);   //Membaca nilai angka dari string sampai_kurung 
+		printf("sin(%.2lf) = %.6lf\n", x, sin(x));  //Menampilkan hasil perhitungan sinus dari x 
+	} 
+	else if (strcmp(operasi, "cos") == 0) { //Memeriksa apakah string operasi sama dengan "cos"
+		sscanf(sampai_kurung, "%lf", &x);
+		printf("cos(%.2lf) =  %.6lf\n", x, cos(x));  //Menampilkan hasil perhitungan cos dari x
+	}
+	else if (strcmp(operasi,"tan") == 0) { //Memeriksa apakah string operasi sama dengan "tan"
+		sscanf(sampai_kurung, "%lf", &x);
+		printf("tan(%.2lf) = %.6lf\n", x, tan(x)); //Menampilkan hasil perhitungan tan dari x
+	} 
+	else if (strcmp(operasi, "cot") == 0) { //Memeriksa apakah string operasi sama dengan "cot"
+		sscanf(sampai_kurung, "%lf", &x);
+		printf("cot(%.2lf) = %.6lf\n", x, cot(x));  //Menampilkan hasil perhitungan cotan dari x
+	} 
+	else if (strcmp(operasi, "csc") == 0) { //Memeriksa apakah string operasi sama dengan "cosec"
+		sscanf(sampai_kurung, "%lf", &x);
+		printf("cosec(%.2lf) = %.6lf\n", x, csc(x)); //Menampilkan hasil perhitungan cosec dari x
+	} 
+	else if (strcmp(operasi,"secan" ) == 0) { //Memeriksa apakah string operasi sama dengan "secan"
+		sscanf(sampai_kurung, "%lf", &x);
+		printf("secan(%.2lf) = %.6lf\n", x, sec(x)); //Menampilkan hasil perhitungan secan dari x
+	} 
+	else if (strcmp(operasi, "!") == 0) { //Memeriksa apakah string operasi sama dengan faktorial "!"
+		sscanf(sampai_kurung, "%lf", &x);
+		double result = faktorial(x);
+		printf("%.2lf! = %.4lf\n", x, result); //Menampilkan hasil perhitungan dari faktorial x
+	} 
+	else {
+		printf("Operasi yang dimasukkan tidak valid.\n");
+	}
+	return 0;
+}
