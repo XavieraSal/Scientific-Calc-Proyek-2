@@ -4,8 +4,74 @@
 #include "AuliaAziizah.h"
 #define maks 10
 
+//exponensial (exp)
+double exponensial(double nilai, double pangkat) 
+/*
+IS : terdapat dua buah angka, satu sebagai nilai dan satu sebagai pangkat
+FS : hasil perhitungan exponensial
+Referensi : kalkulator laptop
+*/
+{
+    double i, hasil;
+    
+    hasil = nilai;
+    
+    if(pangkat > 0.0) {
+    	hasil = nilai * 10.0;
+	    for(i=1; i<pangkat; i++){
+	    	hasil = hasil * 10.0;
+		}
+	}
+	else if (pangkat < 0.0) {
+		hasil = nilai * 0.1;
+		pangkat = -1 * pangkat;
+	    for(i=1; i<pangkat; i++){
+	    	hasil = hasil * 0.1;
+		}
+	}
+    return hasil;
+}
+
+//logaritma
+double ln(double nilai)
+/*
+IS :  terdapat satu buah angka
+FS : hasil perhitungan logaritma natural
+Referensi : stackoverflow (https://stackoverflow.com/questions/35968963/
+trying-to-calculate-logarithm-base-10-without-math-h-really-close-just-having
+*/
+{
+    double result = 0.0;
+    double y = (nilai - 1) / (nilai + 1);
+    double power = y;
+    double term = power;
+    int count = 1;
+    while (term > 1e-15 || term < -1e-15) {
+        result = result + term;
+        power = power * y * y;
+        term = power / (2 * count + 1);
+        count++;
+    }
+    return 2 * result;
+}
+
+double logaritmaBebas(double nilai, double basis)
+/*
+IS : terdapat dua buah angka, satu sebagai nilai dan satu sebagai basis 
+FS : hasil perhitungan logaritma basis bebas
+Referensi : photomath
+*/
+{
+	double lnX, lnY, hasil;
+	lnX = ln(nilai);
+	lnY = ln(basis);
+	hasil = lnX / lnY;
+	return hasil;
+}
+
 /*Konversi Suhu*/
 float konversiCelciusFahrenheit(float nilai){
+	
 	float fahrenheit;
 	fahrenheit = (nilai*9/5)+32;
 	return fahrenheit;
@@ -1014,49 +1080,6 @@ void matriksPerkalianSkalar(){
     }
 }
 
-float exponensial(float nilai, float pangkat){
-    float i, hasil;
-    
-    hasil = nilai;
-    
-    if(pangkat > 0.0) {
-    	hasil = nilai * 10.0;
-	    for(i=1; i<pangkat; i++){
-	    	hasil = hasil * 10.0;
-		}
-	}
-	else if (pangkat < 0.0) {
-		hasil = nilai * 0.1;
-		pangkat = -1 * pangkat;
-	    for(i=1; i<pangkat; i++){
-	    	hasil = hasil * 0.1;
-		}
-	}
-    return hasil;
-}
-
-double ln(double nilai){
-    double result = 0.0;
-    double y = (nilai - 1) / (nilai + 1);
-    double power = y;
-    double term = power;
-    int count = 1;
-    while (term > 1e-15 || term < -1e-15) {
-        result = result + term;
-        power = power * y * y;
-        term = power / (2 * count + 1);
-        count++;
-    }
-    return 2 * result;
-}
-
-double logaritmaBebas(double nilai, double basis){
-	double lnX, lnY, hasil;
-	lnX = ln(nilai);
-	lnY = ln(basis);
-	hasil = lnX / lnY;
-	return hasil;
-}
 
 int main(){
 	char satuan[10];
