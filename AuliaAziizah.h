@@ -1,6 +1,13 @@
 #ifndef AuliaAziizah_h
 #include <stdlib.h>
 
+/*exponensial*/
+float exponensial(float nilai, float pangkat);
+
+/*Logaritma*/
+double ln(double nilai);
+double logaritmaBebas(double nilai, double basis)
+
 /*Konversi Suhu*/
 float konversiCelciusFahrenheit(float nilai);
 float konversiCelciusKelvin(float nilai);
@@ -156,14 +163,6 @@ void matriksPengurangan();
 void matriksPerkalian();
 void transposeMatriks();
 void matriksPerkalianSkalar()
-
-
-/*exponensial*/
-float exponensial(float nilai, float pangkat);
-
-/*Logaritma*/
-double ln(double nilai);
-double logaritmaBebas(double nilai, double basis)
 
 #endif
 
