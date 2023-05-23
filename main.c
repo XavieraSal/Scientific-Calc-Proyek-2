@@ -34,7 +34,7 @@ int main(){
 		memset(input,'\0',sizeof(input));
 		memset(input2,'\0',sizeof(input2));
 		memset(input3,'\0',sizeof(input3));
-		printf("inputkan operasi : ");
+		printf(" : ");
 	//	getchar();
 		fgets(input, sizeof(input), stdin); 
 		
@@ -353,11 +353,11 @@ int main(){
 				    
 				} 
 				
-			else if (p[0]=='e') {
-				    input3[i]="2.71828182846";
-				    cek_a++;
-				    
-				} 
+//			else if (p[0]=='e') {
+//				    input3[i]="2.71828182846";
+//				    cek_a++;
+//				    
+//				} 
 	        
 			else if(!isdigit(p[0])){
 			
@@ -583,16 +583,18 @@ int main(){
     	i=0;
 	    while (input3[i]!=NULL){
 	    	
-	    	if (strcmp(input3[i], "S") == 0 || strcmp(input3[i], "C") == 0 || strcmp(input3[i], "T") == 0 || strcmp(input3[i], "s") == 0 || strcmp(input3[i], "c") == 0 || strcmp(input3[i], "t") == 0 || strcmp(input3[i], "l") == 0) {
-				if (strcmp(input3[i+3], ")") != 0){
+	    	if(strcmp(input3[i], "S") == 0 || strcmp(input3[i], "C") == 0 || strcmp(input3[i], "T") == 0 || strcmp(input3[i], "s") == 0 || strcmp(input3[i], "c") == 0 || strcmp(input3[i], "t") == 0 || strcmp(input3[i], "l") == 0||strcmp(input3[i], "aS") == 0 || strcmp(input3[i], "aC") == 0 || strcmp(input3[i], "aT") == 0 || strcmp(input3[i], "as") == 0 || strcmp(input3[i], "ac") == 0 || strcmp(input3[i], "at") == 0) {
+				if (strcmp(input3[i+1], "(") != 0){
 	    			printf("\n input salah\n");
 	    			cek_input=false;
+	    			break;
 				}
 			}
 			else if (strcmp(input3[i], "L") == 0){
-				if (strcmp(input3[i+4], ")") != 0){
+				if (!isdigit(input3[i+1])&&strcmp(input3[i+2], "(") != 0||strcmp(input3[i+2], "(") != 0){
 	    			printf("\n input salah\n");
 	    			cek_input=false;
+	    			break;
 	    		}
 	    	}
 			i++;	
@@ -602,7 +604,7 @@ int main(){
 			
 		
 			
-		  	printf("\ntes\n");
+		  	//printf("\ntes\n");
 		  	i=0;
 		  	while(i<cek_o+cek_a){
 		  		
@@ -631,6 +633,12 @@ int main(){
 			history(input3,result,cek_o+cek_a);
 		
 		}
+		
+//		else if(cek_input==false){
+//			
+//			printf("\n input salah");
+//			
+//		}
 		
 		printf("\n\nApakah ingin mengulang ? (y/t) ");
 		ulang=getch();

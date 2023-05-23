@@ -1048,8 +1048,9 @@ double ln(double nilai){
 	/*
 	IS :  terdapat satu buah angka
 	FS : hasil perhitungan logaritma natural
-	Referensi : stackoverflow (https://stackoverflow.com/questions/35968963/
-	trying-to-calculate-logarithm-base-10-without-math-h-really-close-just-having
+	Referensi : 
+	1. stackoverflow (https://stackoverflow.com/questions/35968963/trying-to-calculate-logarithm-base-10-without-math-h-really-close-just-having
+
 	*/
     double result = 0.0;
     double y = (nilai - 1) / (nilai + 1);

@@ -26,6 +26,8 @@
 //	strtok
 //	https://www.codingame.com/playgrounds/14213/how-to-play-with-strings-in-c/string-split
 
+//	Binary Expression Tree
+//	https://www.geeksforgeeks.org/expression-tree/
 
 
 void ins_queue(char* item,int* tail){

@@ -12,8 +12,9 @@ float AkarKuadrat(float x) {
     return hasil; //mengembalikan nilai hasil
 }
 //F.S: Mengembalikan value hasil sebagai hasil perhitungan akar kuadrat
-//Referensi https://stackoverflow.com/search?q=square+root+without+math.c
-			//https://byjus.com/maths/newton-raphson-method/#:~:text=The%20Newton%20Raphson%20Method%20is,the%20method%20is%20quadratically%20convergent.
+//Referensi modul double akarsemua dari Paulina 
+//https://stackoverflow.com/search?q=square+root+without+math.c
+//https://byjus.com/maths/newton-raphson-method/#:~:text=The%20Newton%20Raphson%20Method%20is,the%20method%20is%20quadratically%20convergent.
 
 /*----------------------------------------------------------------*/
 //I.S: definisikan fungsi arctan dengan parameter x.
@@ -133,6 +134,7 @@ double arcsec (double x){
 1. https://byjus.com/maths/inverse-trigonometric-functions/
 2. https://www.geeksforgeeks.org/inverse-trigonometric-identities/
 3. Photomath
+
 */
 
 

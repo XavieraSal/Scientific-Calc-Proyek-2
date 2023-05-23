@@ -6,6 +6,12 @@
 //	pilihan();
 //}
 
+
+/*  is :  
+	fs : hasil perhitungan operasi disimpan dalam file .txt
+	referensi : Tugas besar pribadi DDP semester 1,
+				https://stackoverflow.com/questions/34008206/how-to-create-a-new-text-file-in-c
+*/
 void history(char* input[],double result, int panjang) {
     FILE *file;
     //int result;
@@ -80,7 +86,6 @@ void pilihan(){
 	fs : hasil perhitungan pangkat
 	referensi : http://cahyasmara.blogspot.com/2017/04/program-perhitungan-perpangkatan-dengan.html
 */
-
 int pangkat(int x, int y)
 {
 	int p;
@@ -105,6 +110,10 @@ void perpangkatan()
     printf("Hasilnya adalah  : %d", hasil);
 }
 
+/*  is : terdapat 2 buang angka, satu sebagai basis dan satu sebagai akar
+	fs : hasil perhitungan akar
+	referensi : Teman (Ridha)	
+*/
 double akarsemua(double x, double n) 
 {
     double hasil = 1.0;
@@ -138,6 +147,10 @@ void akar()
     printf("%.2lf akar %.2lf adalah: %.5lf\n", base, n, hasil);
 }
 
+/*  is : terdapat 1 buah angka
+	fs : hasil perhitungan nilai mutlak
+	referensi : kalkulator
+*/
 int nilaimutlak(int angka) 
 {
    if (angka < 0) {

@@ -4,33 +4,66 @@
 #include "yosua.h"
 
 
-
+/*
+IS: Menginputkan nilai yang dijumlahkan
+FS: Keluar hasi penjumlahan
+Refrensi: Saya buat sendiri
+*/
 //Saya buat modul fungsi penjumlahan dan didefinisikan dengan dua parameter "x dan y, dengan tipe data  fungsi double
 //Inputkan angka yang diinginkan untuk penjumlahan maka akan keluar/outpunya adalah hasil penjumlahan
 double penjumlahan(double x, double y){
 	return x+y;
 }
+
+/*
+IS: Menginputkan nilai yang dikurangkan
+FS: Keluar hasi pengurangan
+Refrensi: saya buat sendiri
+*/
 //Saya buat modul fungsi pengurangan dan didefinisikan dengan dua parameter "x dan y, dengan tipe data  fungsi double
 //Inputkan angka yang diinginkan untuk pengurangan maka akan keluar/outpunya adalah hasil pengurangan
 double pengurangan(double x, double y){
 	return x-y;
 }
+
+/*
+IS: Menginputkan nilai yang dikalikan
+FS: Keluar hasi perkalian
+Refrensi: saya buat sendiri
+*/
 //Saya buat modul fungsi perkalian dan didefinisikan dengan dua parameter "x dan y, dengan tipe data  fungsi double
 //Inputkan angka yang diinginkan untuk perkalian maka akan keluar/outpunya adalah hasil perkalian
 double perkalian(double x, double y){
 	return x*y;
 }
+
+/*
+IS: Menginputkan nilai yang dibagikan
+FS: Keluar hasi pembagian
+Refrensi: Saya sendiri
+*/
 //Saya buat modul fungsi pembagian dan didefinisikan dengan dua parameter "x dan y, dengan tipe data  fungsi double
 //Inputkan angka yang diinginkan untuk pembagian maka akan keluar/outpunya adalah hasil pembagian
 double pembagian(double x, double y){
 	return x/y;
 }
 
+/*
+IS: Menginputkan nilai yang dimoduluskan
+FS: Keluar hasi modulus
+Refrensi: 
+*/
 //Saya buat modul fungsi modulus dan didefinisikan dengan dua parameter "x dan y, dengan tipe data  fungsi int
 //Inputkan angka yang diinginkan untuk modulus maka akan keluar/outpunya adalah hasil modulus
 int modulus(int x,int y){
 	return  x%y;
 }
+
+/*
+IS: Menginputkan nilai yang dipersentasekan
+FS: Keluar hasi presentase
+Refrensi: Teman (Fatah)
+*/
 //Saya buat modul fungsi persentase dan didefinisikan dengan dua parameter "x dan y, dengan tipe data  fungsi double
 //Inputkan angka yang diinginkan untuk persentase maka akan keluar/outpunya adalah hasil persentase
 double persent (double desimal)
